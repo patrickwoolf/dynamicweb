@@ -90,7 +90,7 @@ Cough ability: {functional, impaired}
 Tongue movement: {full, limited, minimal}
 
 3 mL Swallow Trial:
-- Oral holding: {+, -}, Drooling: {+, -}, Premature spillage: {+, -}
+- Oral stasis: {+, -}, Drooling: {+, -}, Premature spillage: {+, -}
 - Time to larynx elevation: {<1s, 1–3s, >3s}
 - Larynx elevation: {full, decreased, minimal}
 - Choking: {+, -} {pre,during,post}
