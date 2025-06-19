@@ -43,8 +43,8 @@ Tactile extinction: {+,-}
 [Speech & Language]
 Main language: {Mandarin, Taiwanese, Hakka, English}
 -LAST-A score: __/15
- Expression index: __/8 (Naming {0,1,2,3,4,5}, Repetition {0,1,2}, Auto speech {0,1}
- Receptive index: __/7 (Picture {0,1,2,3,4}, Verbal {0,1,2,3}
+ Expression index: __/8 Naming {0,1,2,3,4,5}, Repetition {0,1,2}, Auto speech {0,1}
+ Receptive index: __/7 Picture {0,1,2,3,4}, Verbal {0,1,2,3}
 -Auditory comprehension: {good, impaired}
  Object/Body part: {correct, incorrect}
 -Expression: {fluent, non-fluent}, {spontaneous, cued}
