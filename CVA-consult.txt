@@ -44,7 +44,8 @@ Deep Tendon Reflexes (DTR):
 Right / Left: {+,++,+++,++++} / {+,++,+++,++++}
 
 Spasticity (MAS):
-Left elbow: {0,1,1+,2,3}
+Elbow: {0,1,1+,2,3}
+Knee: {0,1,1+,2,3}
 
 [Sensation]
 Light touch: {intact, impaired, unable to assess}
