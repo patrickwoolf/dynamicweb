@@ -1,5 +1,5 @@
 [Consciousness & Cognition]
-Consciousness: E{1–4}M{1–6}V{1–5}, {alert and oriented, disoriented}
+Consciousness: E{1,2,3,4}M{1,2,3,4,5,6}V{1,2,3,4,5}, {alert and oriented, disoriented}
 Appearance: {fair spirit, ill-looking}
 Response: {cooperative, withdrawn}
 Mood: {stable, irritable, anxious}
