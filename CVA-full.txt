@@ -4,6 +4,16 @@ Appearance: {fair spirit, ill-looking}
 Response: {cooperative, withdrawn}
 Mood: {stable, irritable, anxious}
 Rancho Los Amigos (if TBI): Level {I,II,III,IV,V,VI,VII,VIII}
+ Level I: No Response
+ Level II: Generalized Response
+ Level III: Localized Response
+ Level IV: Confused-agitated
+ Level V: Confused-inappropriate, non-Agitated, maximal assistance 
+          (f/u Simple order + 自我照顧 under assistance)
+ Level VI: Confused-appropriate, moderate assistance
+           (Social interaction但impaired judgement)
+ Level VII: Automatic-appropriate, minimal assistance in ADL (goal-directed)
+ Level VIII: Purposeful-appropriate, standby assistance
 
 [Mood Assessment]
 PHQ-2:
@@ -33,8 +43,8 @@ Tactile extinction: {+,-}
 [Speech & Language]
 Main language: {Mandarin, Taiwanese, Hakka, English}
 -LAST-A score: __/15
- Expression index: __/8 (Naming 5/5, Repetition 2/2, Auto speech 1/1)
- Receptive index: __/7 (Picture 4/4, Verbal 3/3)
+ Expression index: __/8 (Naming {0,1,2,3,4,5}, Repetition {0,1,2}, Auto speech {0,1}
+ Receptive index: __/7 (Picture {0,1,2,3,4}, Verbal {0,1,2,3}
 -Auditory comprehension: {good, impaired}
  Object/Body part: {correct, incorrect}
 -Expression: {fluent, non-fluent}, {spontaneous, cued}
