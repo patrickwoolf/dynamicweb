@@ -173,16 +173,7 @@ Functional Ambulation Classification (FAC): {0,1,2,3,4,5}
 Timed Up & Go (TUG): __ sec / NA
 
 [Barthel Index] /100
-- Feeding: {0,5,10}  
-- Transfer: {0,5,10,15}  
-- Grooming: {0,5}  
-- Toilet: {0,5,10}  
-- Bathing: {0,5}  
-- Walking: {0,5,10,15}  
-- Stairs: {0,5,10}  
-- Dressing: {0,5,10}  
-- Bowel: {0,5,10}  
-- Bladder: {0,5,10}
+Feeding: {0,5,10}/10, Transfer: {0,5,10,15}/15, Grooming: {0,5}/5, Toilet: {0,5,10}/10, Bathing: {0,5}/5, Walking: {0,5,10,15}/15, Stairs: {0,5,10}/10, Dressing: {0,5,10}/10, Bowel: {0,5,10}/10, Bladder: {0,5,10}/10
 
 [Modified Rankin Scale (mRS)] {0,1,2,3,4,5}
 0-沒有任何症狀
