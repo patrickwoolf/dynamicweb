@@ -117,7 +117,7 @@ Brunnstrom:
  {R,L}UE(P/D): {I,II,III,IV,V}/{I,II,III,IV,V}, LE: {I,II,III,IV,V}
 MMT: 
  RUE(P/D): {1,2,3,4,5}/{1,2,3,4,5}, RLE(P/D): {1,2,3,4,5}/{1,2,3,4,5}
- RUE(P/D): {1,2,3,4,5}/{1,2,3,4,5}, RLE(P/D): {1,2,3,4,5}/{1,2,3,4,5}
+ LUE(P/D): {1,2,3,4,5}/{1,2,3,4,5}, LLE(P/D): {1,2,3,4,5}/{1,2,3,4,5}
 
 DTR(R/L)
  Elbow flexor: {+,++,+++,++++}/{+,++,+++,++++}
@@ -134,15 +134,15 @@ Spasticity (MAS):
   Ankle plantarflexor: {0,1,1+,2,3}
 
 Pathologic Reflexes:
-  Babinski: R/L = {+,-}, {+/-}
-  Hoffmann: R/L = {+/-}, {+/-}
+  Babinski: R/L = {+,-}, {+,-}
+  Hoffmann: R/L = {+,-}, {+,-}
 
 [Sensation]
 - Pinprick/light touch: {intact, impaired}
 - Proprioception: {intact, impaired}
 
 [Coordination & Balance]
-- Dysmetria: {+,-}
+- Dysmetria:
   - Finger-nose-finger: {+,-}
   - Heel-knee-shin: {+,-}
 - Romberg: {unable, negative, positive}
@@ -153,14 +153,14 @@ Urination: {continent, partially continent, incontinent}, {Foley catheter, diape
 
 [Functional Status]
 Balance:
-  Sitting: {normal, impaired}
-  Standing: {normal, impaired}
+  Sitting: {fair, poor}
+  Standing: {fair, poor}
 Function:
-  Rolling: {assistance, supervision}
-  Sitting up: {assistance, supervision}
-  Standing up: {assistance, supervision}
+  Rolling: {minimal, moderate, maximal} {assistance, contact guard, supervision}
+  Sitting up: {minimal, moderate, maximal} {assistance, contact guard, supervision}
+  Standing up: {minimal, moderate, maximal} {assistance, contact guard, supervision}
   Transfer: {assistance, supervision}
-  Ambulation: {with, without} {handrail, cane, walker} under {assistance, supervision}
+  Ambulation: {with, without device} {handrail, cane, walker} under {minimal, moderate, maximal} {assistance, supervision}
   Slope/Stairs: {assistance, supervision}
 
 Functional Ambulation Classification (FAC): {0,1,2,3,4,5}
