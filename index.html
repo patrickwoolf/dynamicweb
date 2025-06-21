@@ -1,312 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Website Generator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Website Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
 
-        h1 {
-            color: #333;
-        }
+        h1 {
+            color: #333;
+        }
 
-        .form-group {
-            position: relative;
-            width: 80%;
-            margin-bottom: 20px;
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-        }
+        .form-group {
+            position: relative;
+            width: 80%;
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
 
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
 
-        input {
-            width: 0%;
-            padding: 8px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
+        input {
+            width: 0%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
 
-        button {
-            background-color: #4caf50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 5px;
-        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
 
-        .form-group textarea {
-            width: calc(100% - 30px);
-            padding: 8px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            resize: none;
-            overflow-y: hidden;
-        }
+        .form-group textarea {
+            width: calc(100% - 30px);
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+            overflow-y: hidden;
+        }
 
-        .delete-button {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            width: 15px;
-            background-color: transparent;
-            color: black;
-            border: none;
-            padding: 1px;
-            border-radius: 50%;
-            cursor: pointer;
-        }
+        .delete-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 15px;
+            background-color: transparent;
+            color: black;
+            border: none;
+            padding: 1px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
 
-        #resultContainer {
-            margin-top: 20px;
-            text-align: left;
-        }
+        #resultContainer {
+            margin-top: 20px;
+            text-align: left;
+        }
 
-        .selectable-box {
-            display: inline-block;
-            padding: 8px;
-            margin: 5px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+        .selectable-box {
+            display: inline-block;
+            padding: 8px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-        .selectable-box:hover {
-            background-color: #e0f7fa;
-        }
+        .selectable-box:hover {
+            background-color: #e0f7fa;
+        }
 
-        .selectable-box.selected {
-            background-color: #c8e6c9;
-        }
+        .selectable-box.selected {
+            background-color: #c8e6c9;
+        }
 
-        p {
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
+        p {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
 
-        select {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
 
-        #floatingImage {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            width: 6%;
-            height: auto;
-            z-index: 1000;
-        }
-    </style>
+        #floatingImage {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 6%;
+            height: auto;
+            z-index: 1000;
+        }
+
+        .inline-textarea {
+            display: inline-block;
+            resize: none;
+            font-family: inherit;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 4px;
+            width: 200px;
+            height: 24px;
+            vertical-align: middle;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Dynamic Website Generator</h1>
-    <a href="https://github.com/patrickwoolf/dynamicweb" target="_blank">
-        <img id="floatingImage" src="icon.png" alt="Homepage">
-    </a>
-    <i>Patrick Yi-Hong Wu</i>
-    <p>PE: {intact, impaired} <br>↓<br>
-        PE:
-        <span class="selectable-box" onclick="toggleSelected(this)">intact</span>
-        <span class="selectable-box" onclick="toggleSelected(this)">impaired</span>
-    </p>
-    
-    <form id="dynamicForm">
-        <div id="dynamicContent"></div>
-        <button type="button" onclick="addFormGroup()">Add Form</button>
-        <button type="button" onclick="generateResult()">Generate Result</button>
-    </form>
+    <h1>Dynamic Website Generator</h1>
+    <a href="https://github.com/patrickwoolf/dynamicweb" target="_blank">
+        <img id="floatingImage" src="icon.png" alt="Homepage">
+    </a>
+    <i>Patrick Yi-Hong Wu</i>
+    <p>PE: {intact, impaired} <br>↓<br>
+        PE:
+        <span class="selectable-box" onclick="toggleSelected(this)">intact</span>
+        <span class="selectable-box" onclick="toggleSelected(this)">impaired</span>
+    </p>
 
-    <div id="resultContainer"></div>
+    <form id="dynamicForm">
+        <div id="dynamicContent"></div>
+        <button type="button" onclick="addFormGroup()">Add Form</button>
+        <button type="button" onclick="generateResult()">Generate Result</button>
+    </form>
 
-    <form id="dynamicForm">
-        <button type="button" onclick="copyResult()">Copy Result</button>
-    </form>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Add a default form group when the document is ready
-            addFormGroup();
-            // Load saved textarea values from localStorage
-            loadSavedValues();
-        });
+    <div id="resultContainer"></div>
 
-        function addFormGroup() {
-            const dynamicContent = document.getElementById('dynamicContent');
-            const formGroup = document.createElement('div');
-            formGroup.classList.add('form-group');
+    <form id="dynamicForm">
+        <button type="button" onclick="copyResult()">Copy Result</button>
+    </form>
 
-            const label = document.createElement('label');
-            label.textContent = 'Enter your content:';
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            addFormGroup();
+            loadSavedValues();
+        });
 
-            const textarea = document.createElement('textarea');
-            textarea.placeholder = 'Type here...';
-            textarea.id = 'textarea' + dynamicContent.childElementCount;
-            textarea.addEventListener('input', function () {
-                autoResize(this);
-                saveValueToLocalStorage(this);
-            });
+        function addFormGroup() {
+            const dynamicContent = document.getElementById('dynamicContent');
+            const formGroup = document.createElement('div');
+            formGroup.classList.add('form-group');
 
-            const deleteButton = document.createElement('button');
-            deleteButton.textContent = 'x';
-            deleteButton.classList.add('delete-button');
-            deleteButton.onclick = function () {
-                dynamicContent.removeChild(formGroup);
-                localStorage.removeItem(textarea.id);
-            };
+            const label = document.createElement('label');
+            label.textContent = 'Enter your content:';
 
-            formGroup.appendChild(label);
-            formGroup.appendChild(textarea);
-            formGroup.appendChild(deleteButton);
+            const textarea = document.createElement('textarea');
+            textarea.placeholder = 'Type here...';
+            textarea.id = 'textarea' + dynamicContent.childElementCount;
+            textarea.addEventListener('input', function () {
+                autoResize(this);
+                saveValueToLocalStorage(this);
+            });
 
-            dynamicContent.appendChild(formGroup);
-        }
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'x';
+            deleteButton.classList.add('delete-button');
+            deleteButton.onclick = function () {
+                dynamicContent.removeChild(formGroup);
+                localStorage.removeItem(textarea.id);
+            };
 
-        function autoResize(textarea) {
-            textarea.style.height = 'auto';
-            textarea.style.height = (textarea.scrollHeight) + 'px';
-        }
+            formGroup.appendChild(label);
+            formGroup.appendChild(textarea);
+            formGroup.appendChild(deleteButton);
+            dynamicContent.appendChild(formGroup);
+        }
 
-        function generateResult() {
-            const dynamicContent = document.getElementById('dynamicContent');
-            const formGroups = dynamicContent.getElementsByClassName('form-group');
-            const resultContainer = document.getElementById('resultContainer');
-            resultContainer.innerHTML = '';
+        function autoResize(textarea) {
+            textarea.style.height = 'auto';
+            textarea.style.height = (textarea.scrollHeight) + 'px';
+        }
 
-            for (const formGroup of formGroups) {
-                const textarea = formGroup.querySelector('textarea');
-                const userInput = textarea.value;
-                const contentFragment = document.createDocumentFragment();
-                const lines = userInput.split('\n');
+        function generateResult() {
+            const dynamicContent = document.getElementById('dynamicContent');
+            const formGroups = dynamicContent.getElementsByClassName('form-group');
+            const resultContainer = document.getElementById('resultContainer');
+            resultContainer.innerHTML = '';
 
-                for (let i = 0; i < lines.length; i++) {
-                    if (i > 0) {
-                        contentFragment.appendChild(document.createElement('br'));
-                    }
+            for (const formGroup of formGroups) {
+                const textarea = formGroup.querySelector('textarea');
+                const userInput = textarea.value;
+                const contentFragment = document.createDocumentFragment();
+                const lines = userInput.split('\n');
 
-                    const line = lines[i];
-                    const regex = /\{([^}]+)\}/g;
-                    let match;
-                    let lastIndex = 0;
+                for (let i = 0; i < lines.length; i++) {
+                    if (i > 0) contentFragment.appendChild(document.createElement('br'));
 
-                    while ((match = regex.exec(line)) !== null) {
-                        contentFragment.appendChild(document.createTextNode(line.substring(lastIndex, match.index)));
+                    const line = lines[i];
+                    const regex = /\{([^}]*)\}/g;
+                    let match;
+                    let lastIndex = 0;
 
-                        const options = match[1].split(',').map(option => option.trim());
+                    while ((match = regex.exec(line)) !== null) {
+                        contentFragment.appendChild(document.createTextNode(line.substring(lastIndex, match.index)));
 
-                        for (const option of options) {
-                            const boxElement = document.createElement('div');
-                            boxElement.textContent = option;
-                            boxElement.classList.add('selectable-box');
-                            boxElement.onclick = function () {
-                                boxElement.classList.toggle('selected');
-                            };
+                        const rawContent = match[1].trim();
 
-                            contentFragment.appendChild(boxElement);
-                        }
+                        if (rawContent === '') {
+                            const inputElement = document.createElement('textarea');
+                            inputElement.placeholder = 'Type here...';
+                            inputElement.classList.add('inline-textarea');
+                            contentFragment.appendChild(inputElement);
+                        } else {
+                            const options = rawContent.split(',').map(option => option.trim());
+                            for (const option of options) {
+                                const boxElement = document.createElement('div');
+                                boxElement.textContent = option;
+                                boxElement.classList.add('selectable-box');
+                                boxElement.onclick = function () {
+                                    boxElement.classList.toggle('selected');
+                                };
+                                contentFragment.appendChild(boxElement);
+                            }
+                        }
 
-                        lastIndex = regex.lastIndex;
-                    }
+                        lastIndex = regex.lastIndex;
+                    }
 
-                    if (lastIndex < line.length) {
-                        contentFragment.appendChild(document.createTextNode(line.substring(lastIndex)));
-                    }
-                }
+                    if (lastIndex < line.length) {
+                        contentFragment.appendChild(document.createTextNode(line.substring(lastIndex)));
+                    }
+                }
 
-                const contentElement = document.createElement('p');
-                contentElement.appendChild(contentFragment);
-                resultContainer.appendChild(contentElement);
-            }
-        }
+                const contentElement = document.createElement('p');
+                contentElement.appendChild(contentFragment);
+                resultContainer.appendChild(contentElement);
+            }
+        }
 
-        function saveValueToLocalStorage(textarea) {
-            localStorage.setItem(textarea.id, textarea.value);
-        }
+        function saveValueToLocalStorage(textarea) {
+            localStorage.setItem(textarea.id, textarea.value);
+        }
 
-        function loadSavedValues() {
-            const dynamicContent = document.getElementById('dynamicContent');
-            const formGroups = dynamicContent.getElementsByClassName('form-group');
+        function loadSavedValues() {
+            const dynamicContent = document.getElementById('dynamicContent');
+            const formGroups = dynamicContent.getElementsByClassName('form-group');
+            for (const formGroup of formGroups) {
+                const textarea = formGroup.querySelector('textarea');
+                const savedValue = localStorage.getItem(textarea.id);
+                if (savedValue !== null) {
+                    textarea.value = savedValue;
+                    autoResize(textarea);
+                }
+            }
+        }
 
-            for (const formGroup of formGroups) {
-                const textarea = formGroup.querySelector('textarea');
-                const savedValue = localStorage.getItem(textarea.id);
+        function copyResult() {
+            const resultContainer = document.getElementById('resultContainer');
+            const paragraphs = resultContainer.getElementsByTagName('p');
+            let copiedContent = '';
 
-                if (savedValue !== null) {
-                    textarea.value = savedValue;
-                    autoResize(textarea);
-                }
-            }
-        }
+            for (const paragraph of paragraphs) {
+                let formattedLine = '';
+                let currentNode = paragraph.firstChild;
 
-        function copyResult() {
-            const resultContainer = document.getElementById('resultContainer');
-            const paragraphs = resultContainer.getElementsByTagName('p');
-            let copiedContent = '';
+                while (currentNode) {
+                    if (currentNode.nodeType === Node.TEXT_NODE) {
+                        formattedLine += currentNode.nodeValue;
+                    } else if (currentNode.tagName === 'DIV') {
+                        if (currentNode.classList.contains('selected')) {
+                            formattedLine += currentNode.textContent.trim();
+                        }
+                    } else if (currentNode.tagName === 'TEXTAREA') {
+                        formattedLine += currentNode.value.trim();
+                    } else if (currentNode.tagName === 'BR') {
+                        formattedLine += '\n';
+                    }
 
-            for (const paragraph of paragraphs) {
-                let formattedLine = '';
-                let currentNode = paragraph.firstChild;
+                    currentNode = currentNode.nextSibling;
+                }
 
-                while (currentNode) {
-                    if (currentNode.nodeType === Node.TEXT_NODE) {
-                        formattedLine += currentNode.nodeValue;
-                    } else if (currentNode.tagName === 'DIV') {
-                        const isBoxSelected = currentNode.classList.contains('selected');
-                        const boxText = isBoxSelected ? currentNode.textContent.trim() : '';
-                        formattedLine += boxText;
-                    } else if (currentNode.tagName === 'BR') {
-                        formattedLine += '\n';
-                    }
+                copiedContent += formattedLine.trim() + '\n';
+            }
 
-                    currentNode = currentNode.nextSibling;
-                }
-
-                copiedContent += formattedLine.trim() + '\n';
-            }
-
-            if (copiedContent.trim() !== '') {
-                const textarea = document.createElement('textarea');
-                textarea.value = copiedContent;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textarea);
-
-                alert('Formatted Text copied to clipboard:\n' + copiedContent);
-            } else {
-                alert('No result to copy!');
-            }
-        }
-
-        window.addEventListener("scroll", function() {
-            var floatingImage = document.getElementById("floatingImage");
-            var scrollPosition = window.scrollY;
-            floatingImage.style.top = maxTopPosition + "px";
-        });
-    </script>
+            if (copiedContent.trim() !== '') {
+                const textarea = document.createElement('textarea');
+                textarea.value = copiedContent;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                alert('Formatted Text copied to clipboard:\n' + copiedContent);
+            } else {
+                alert('No result to copy!');
+            }
+        }
+    </script>
 </body>
+
 </html>
