@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Dynamic Website Generator</title>
 	<style>
 		body {
@@ -27,15 +27,23 @@
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 			display: inline-block;
 		}
-
+    .form-group textarea {
+			width: calc(100% - 30px);
+			padding: 8px;
+			box-sizing: border-box;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			resize: none;
+			overflow-y: hidden;
+		}
+		
 		label {
 			display: block;
 			font-weight: bold;
 			margin-bottom: 8px;
 		}
 
-		input {
-			width: 0%;
+		textarea {
 			padding: 8px;
 			box-sizing: border-box;
 			border: 1px solid #ccc;
@@ -50,34 +58,6 @@
 			border-radius: 5px;
 			cursor: pointer;
 			margin: 5px;
-		}
-
-		.form-group textarea {
-			width: calc(100% - 30px);
-			padding: 8px;
-			box-sizing: border-box;
-			border: 1px solid #ccc;
-			border-radius: 4px;
-			resize: none;
-			overflow-y: hidden;
-		}
-
-		.delete-button {
-			position: absolute;
-			top: 5px;
-			right: 5px;
-			width: 15px;
-			background-color: transparent;
-			color: black;
-			border: none;
-			padding: 1px;
-			border-radius: 50%;
-			cursor: pointer;
-		}
-
-		#resultContainer {
-			margin-top: 20px;
-			text-align: left;
 		}
 
 		.selectable-box {
@@ -98,6 +78,24 @@
 			background-color: #c8e6c9;
 		}
 
+		.delete-button {
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			width: 15px;
+			background-color: transparent;
+			color: black;
+			border: none;
+			padding: 1px;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+
+		#resultContainer {
+			margin-top: 20px;
+			text-align: left;
+		}
+
 		p {
 			background-color: #fff;
 			padding: 15px;
@@ -106,33 +104,16 @@
 			margin-bottom: 20px;
 		}
 
-		select {
-			width: 100%;
-			padding: 8px;
-			box-sizing: border-box;
-			border: 1px solid #ccc;
-			border-radius: 4px;
-		}
-
-		#floatingImage {
-			position: fixed;
-			top: 10px;
-			right: 10px;
-			width: 6%;
-			height: auto;
-			z-index: 1000;
-		}
-
 		.inline-textarea {
 			display: inline-block;
-			resize: none;
 			font-family: inherit;
 			font-size: 14px;
 			border: 1px solid #ccc;
 			border-radius: 4px;
 			padding: 4px;
-			width: 80px; /* default width */
+			width: 90px;
 			height: 24px;
+			resize: none;
 			vertical-align: middle;
 			overflow: hidden;
 		}
@@ -141,27 +122,15 @@
 
 <body>
 	<h1>Dynamic Website Generator</h1>
-	<a href="https://github.com/patrickwoolf/dynamicweb" target="_blank">
-		<img id="floatingImage" src="icon.png" alt="Homepage" />
-	</a>
-	<i>Patrick Yi-Hong Wu</i>
-	<p>PE: {intact, impaired} <br />↓<br />
-		PE:
-		<span class="selectable-box" onclick="toggleSelected(this)">intact</span>
-		<span class="selectable-box" onclick="toggleSelected(this)">impaired</span>
-	</p>
 
 	<form id="dynamicForm">
 		<div id="dynamicContent"></div>
 		<button type="button" onclick="addFormGroup()">Add Form</button>
 		<button type="button" onclick="generateResult()">Generate Result</button>
+		<button type="button" onclick="copyResult()">Copy Result</button>
 	</form>
 
 	<div id="resultContainer"></div>
-
-	<form id="dynamicForm">
-		<button type="button" onclick="copyResult()">Copy Result</button>
-	</form>
 
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
@@ -170,24 +139,24 @@
 		});
 
 		function addFormGroup() {
-			const dynamicContent = document.getElementById("dynamicContent");
-			const formGroup = document.createElement("div");
-			formGroup.classList.add("form-group");
+			const dynamicContent = document.getElementById('dynamicContent');
+			const formGroup = document.createElement('div');
+			formGroup.classList.add('form-group');
 
-			const label = document.createElement("label");
-			label.textContent = "Enter your content:";
+			const label = document.createElement('label');
+			label.textContent = 'Enter your content:';
 
-			const textarea = document.createElement("textarea");
-			textarea.placeholder = "Type here...";
-			textarea.id = "textarea" + dynamicContent.childElementCount;
-			textarea.addEventListener("input", function () {
+			const textarea = document.createElement('textarea');
+			textarea.placeholder = 'Type here...';
+			textarea.id = 'textarea' + dynamicContent.childElementCount;
+			textarea.addEventListener('input', function () {
 				autoResize(this);
 				saveValueToLocalStorage(this);
 			});
 
-			const deleteButton = document.createElement("button");
-			deleteButton.textContent = "x";
-			deleteButton.classList.add("delete-button");
+			const deleteButton = document.createElement('button');
+			deleteButton.textContent = 'x';
+			deleteButton.classList.add('delete-button');
 			deleteButton.onclick = function () {
 				dynamicContent.removeChild(formGroup);
 				localStorage.removeItem(textarea.id);
@@ -200,76 +169,12 @@
 		}
 
 		function autoResize(textarea) {
-			textarea.style.height = "auto";
-			textarea.style.height = textarea.scrollHeight + "px";
-		}
+			textarea.style.height = 'auto';
+			textarea.style.height = textarea.scrollHeight + 'px';
 
-		function generateResult() {
-			const dynamicContent = document.getElementById("dynamicContent");
-			const formGroups = dynamicContent.getElementsByClassName("form-group");
-			const resultContainer = document.getElementById("resultContainer");
-			resultContainer.innerHTML = "";
-
-			for (const formGroup of formGroups) {
-				const textarea = formGroup.querySelector("textarea");
-				const userInput = textarea.value;
-				const contentFragment = document.createDocumentFragment();
-				const lines = userInput.split("\n");
-
-				for (let i = 0; i < lines.length; i++) {
-					if (i > 0) contentFragment.appendChild(document.createElement("br"));
-
-					const line = lines[i];
-					const regex = /\{([^}]*)\}/g;
-					let match;
-					let lastIndex = 0;
-
-					while ((match = regex.exec(line)) !== null) {
-						contentFragment.appendChild(
-							document.createTextNode(line.substring(lastIndex, match.index))
-						);
-
-						const rawContent = match[1].trim();
-
-						if (rawContent === "") {
-							const inputElement = document.createElement("textarea");
-							inputElement.placeholder = "Type here...";
-							inputElement.classList.add("inline-textarea");
-
-							// Auto-expand width based on input length:
-							inputElement.oninput = function () {
-								const charCount = this.value.length;
-								const newWidth = Math.max(50, charCount * 8); // 8px per character approx
-								this.style.width = newWidth + "px";
-							};
-
-							contentFragment.appendChild(inputElement);
-						} else {
-							const options = rawContent.split(",").map((option) => option.trim());
-							for (const option of options) {
-								const boxElement = document.createElement("div");
-								boxElement.textContent = option;
-								boxElement.classList.add("selectable-box");
-								boxElement.onclick = function () {
-									boxElement.classList.toggle("selected");
-								};
-								contentFragment.appendChild(boxElement);
-							}
-						}
-
-						lastIndex = regex.lastIndex;
-					}
-
-					if (lastIndex < line.length) {
-						contentFragment.appendChild(
-							document.createTextNode(line.substring(lastIndex))
-						);
-					}
-				}
-
-				const contentElement = document.createElement("p");
-				contentElement.appendChild(contentFragment);
-				resultContainer.appendChild(contentElement);
+			if (textarea.classList.contains('inline-textarea')) {
+				textarea.style.width = '50px';
+				textarea.style.width = (textarea.scrollWidth + 5) + 'px';
 			}
 		}
 
@@ -278,10 +183,11 @@
 		}
 
 		function loadSavedValues() {
-			const dynamicContent = document.getElementById("dynamicContent");
-			const formGroups = dynamicContent.getElementsByClassName("form-group");
+			const dynamicContent = document.getElementById('dynamicContent');
+			const formGroups = dynamicContent.getElementsByClassName('form-group');
+
 			for (const formGroup of formGroups) {
-				const textarea = formGroup.querySelector("textarea");
+				const textarea = formGroup.querySelector('textarea');
 				const savedValue = localStorage.getItem(textarea.id);
 				if (savedValue !== null) {
 					textarea.value = savedValue;
@@ -290,49 +196,97 @@
 			}
 		}
 
-		function copyResult() {
-			const resultContainer = document.getElementById("resultContainer");
-			const paragraphs = resultContainer.getElementsByTagName("p");
-			let copiedContent = "";
+		function generateResult() {
+			const dynamicContent = document.getElementById('dynamicContent');
+			const formGroups = dynamicContent.getElementsByClassName('form-group');
+			const resultContainer = document.getElementById('resultContainer');
+			resultContainer.innerHTML = '';
 
-			for (const paragraph of paragraphs) {
-				let formattedLine = "";
-				let currentNode = paragraph.firstChild;
+			for (const formGroup of formGroups) {
+				const textarea = formGroup.querySelector('textarea');
+				const userInput = textarea.value;
+				const contentFragment = document.createDocumentFragment();
+				const lines = userInput.split('\n');
 
-				while (currentNode) {
-					if (currentNode.nodeType === Node.TEXT_NODE) {
-						formattedLine += currentNode.nodeValue;
-					} else if (currentNode.tagName === "DIV") {
-						if (currentNode.classList.contains("selected")) {
-							formattedLine += currentNode.textContent.trim();
+				for (let i = 0; i < lines.length; i++) {
+					if (i > 0) contentFragment.appendChild(document.createElement('br'));
+
+					const line = lines[i];
+					const regex = /\{([^}]*)\}/g;
+					let match;
+					let lastIndex = 0;
+
+					while ((match = regex.exec(line)) !== null) {
+						contentFragment.appendChild(document.createTextNode(line.substring(lastIndex, match.index)));
+
+						const rawContent = match[1].trim();
+
+						if (rawContent === '') {
+							const inputElement = document.createElement('textarea');
+							inputElement.placeholder = 'Type here...';
+							inputElement.classList.add('inline-textarea');
+							inputElement.addEventListener('input', () => autoResize(inputElement));
+							contentFragment.appendChild(inputElement);
+						} else {
+							const options = rawContent.split(',').map(opt => opt.trim());
+							for (const option of options) {
+								const boxElement = document.createElement('div');
+								boxElement.textContent = option;
+								boxElement.classList.add('selectable-box');
+								boxElement.onclick = () => boxElement.classList.toggle('selected');
+								contentFragment.appendChild(boxElement);
+							}
 						}
-					} else if (currentNode.tagName === "TEXTAREA") {
-						formattedLine += currentNode.value.trim();
-					} else if (currentNode.tagName === "BR") {
-						formattedLine += "\n";
+
+						lastIndex = regex.lastIndex;
 					}
 
-					currentNode = currentNode.nextSibling;
+					if (lastIndex < line.length) {
+						contentFragment.appendChild(document.createTextNode(line.substring(lastIndex)));
+					}
 				}
 
-				copiedContent += formattedLine.trim() + "\n";
-			}
-
-			if (copiedContent.trim() !== "") {
-				const textarea = document.createElement("textarea");
-				textarea.value = copiedContent;
-				document.body.appendChild(textarea);
-				textarea.select();
-				document.execCommand("copy");
-				document.body.removeChild(textarea);
-				alert("Formatted Text copied to clipboard:\n" + copiedContent);
-			} else {
-				alert("No result to copy!");
+				const contentElement = document.createElement('p');
+				contentElement.appendChild(contentFragment);
+				resultContainer.appendChild(contentElement);
 			}
 		}
 
-		function toggleSelected(element) {
-			element.classList.toggle("selected");
+		function copyResult() {
+			const resultContainer = document.getElementById('resultContainer');
+			const paragraphs = resultContainer.getElementsByTagName('p');
+			let copiedContent = '';
+
+			for (const paragraph of paragraphs) {
+				let lineText = '';
+				let node = paragraph.firstChild;
+
+				while (node) {
+					if (node.nodeType === Node.TEXT_NODE) {
+						lineText += node.nodeValue;
+					} else if (node.tagName === 'DIV' && node.classList.contains('selected')) {
+						lineText += node.textContent.trim();
+					} else if (node.tagName === 'TEXTAREA') {
+						lineText += node.value.trim();
+					} else if (node.tagName === 'BR') {
+						lineText += '\n';
+					}
+					node = node.nextSibling;
+				}
+				copiedContent += lineText.trim() + '\n';
+			}
+
+			if (copiedContent.trim()) {
+				const temp = document.createElement('textarea');
+				temp.value = copiedContent;
+				document.body.appendChild(temp);
+				temp.select();
+				document.execCommand('copy');
+				document.body.removeChild(temp);
+				alert('Copied:\n' + copiedContent);
+			} else {
+				alert('No result to copy!');
+			}
 		}
 	</script>
 </body>
