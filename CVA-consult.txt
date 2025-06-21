@@ -1,0 +1,60 @@
+[Physical Examination]
+Vital signs: {Stable, Unstable}
+O2 demand: SPO2: >92% with {RA,NC,NRM,BiPAP}
+Consciousness: E{1,2,3,4}V{1,2,3,4,5}M{1,2,3,4,5,6}, {alert, drowsy, stuporous, coma}
+Cognition: {intact, poor cognition, fluctuating, not assessable}, due to {drowsy state, medication effect, ___}
+Tubes: {Foley catheter, nasogastric tube, central line, none, ___}
+
+[Cranial Nerves]
+CN II: visual acuity {intact, impaired}, visual field {intact, impaired}
+CN III/IV/VI: pupils 3/3 mm, light reflex R/L: {+/+}, ptosis: {+,-}, EOM: {full, restricted}
+CN V: facial sensation {intact, impaired}
+CN VII: facial palsy {+,-}
+CN VIII: VOR {intact, impaired}
+CN IX/X: uvula {midline, deviated}, gag reflex {preserved, absent}
+CN XI: trapezius {intact, impaired}
+CN XII: tongue protrusion {midline, deviated}
+
+[Speech & Swallowing]
+Speech:
+- Fluency: {non}fluent
+- Comprehension: {failed, pass} yes/no questions 
+- Repetition: {failed, pass} 白紙真正寫黑字
+- Naming: {failed, pass} pen 
+Swallowing: 
+- Oral stasis: {+, -}, Drooling: {+, -}, Premature spillage: {+, -}
+- Time to larynx elevation: {<1s, 1–3s, >3s}
+- Larynx elevation: {full, decreased, minimal}
+- Choking: {+, -} {pre,during,post}
+- Wet voice: {+, -}
+- Multiple swallows: {+, -}
+
+[Motor Status]
+Muscle Strength (MMT):
+RUE: {0,1,2,3,4,5}
+LUE: {0,1,2,3,4,5}
+RLE: {0,1,2,3,4,5}
+LLE: {0,1,2,3,4,5}
+
+Brunnstrom Stage:
+{R,L}UE (P/D): {I,II,III,IV,V} / {I,II,III,IV,V}
+LE: {I,II,III,IV,V}
+
+Deep Tendon Reflexes (DTR):
+Right / Left: {+,++,+++,++++} / {+,++,+++,++++}
+
+Spasticity (MAS):
+Elbow: {0,1,1+,2,3}
+Knee: {0,1,1+,2,3}
+
+[Sensation]
+Light touch: {intact, impaired, unable to assess}
+
+[Sphincter Function]
+Defecation: {continent, incontinent, diaper use, other: ___}
+Urination: {continent, incontinent, Foley catheter, diaper use, other: ___}
+
+[Functional Status]
+Current status: {bedrest (ICU setting), wheelchair, ambulatory with aid, independent ambulation}
+BADLs: {independent, partially dependent, totally dependent}
+Modified Rankin Scale (mRS): {0,1,2,3,4,5}

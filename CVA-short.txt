@@ -1,0 +1,22 @@
+[Motor status]
+Brunnstrom stage: {R,L} UE proximal/distal/ LE: {I,II,III,IV,V}/{I,II,III,IV,V}/{I,II,III,IV,V}
+Muscle power: 
+ RUE proximal/distal: {0,1,2,3-,3,3+,4,5}/{0,1,2,3-,3,3+,4,5}, RLE proximal/distal: {0,1,2,3-,3,3+,4,5}/{0,1,2,3-,3,3+,4,5}
+ LUE proximal/distal: {0,1,2,3-,3,3+,4,5}/{0,1,2,3-,3,3+,4,5}, LLE proximal/distal: {0,1,2,3-,3,3+,4,5}/{0,1,2,3-,3,3+,4,5}
+DTR: RUE/RLE/LUE/LLE: {+,++,+++}/{+,++,+++,++++}/{+,++,+++}/{+,++,+++,++++}
+Spasticity (MAS): {0,1,1+,2,3}
+
+[Sensation] {symmetrical, R hypoesthesia, L hypoesthesia} to light touch, pain stimuli
+Coordination: dysmetria{+,-}
+Sphincter: {incontinent with Foley, with diaper, continent}
+
+[Functional status]
+Balance(static/dynamic)
+-Sitting balance: {good, fair, poor}/{good, fair, poor}
+-Standing balance: {good, fair, poor}/{good, fair, poor}
+Function
+-Bed mobility and transfer: {supervision, contact guard, assistance}; 
+-Ambulation: {with, without} {wheel walker, walker, quadricane, unicane, handrail} under {supervision, contact guard, assistance}, {backed knee} {Trendelenburg gait} {insufficient hip/knee flexion}
+
+[Barthel index]
+Feeding: {0,5,10}/10, Transfer: {0,5,10,15}/15, Grooming: {0,5}/5, Toilet: {0,5,10}/10, Bathing: {0,5}/5, Walking: {0,5,10,15}/15, Stair: {0,5,10}/10, Dressing: {0,5,10}/10, Bowel: {0,5,10}/10, Bladder: {0,5,10}/10
