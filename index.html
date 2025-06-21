@@ -132,6 +132,11 @@
 		<button type="button" onclick="generateResult()">Generate Result</button>
 	</form>
 
+	<div id="fontControls" style="text-align: center; margin-bottom: 10px;">
+		<button type="button" id="decreaseFontBtn">−</button>
+		<button type="button" id="increaseFontBtn">+</button>
+	</div>
+
 	<div id="resultContainer"></div>
 
 	<button type="button" onclick="copyResult()">Copy Result</button>
@@ -301,6 +306,31 @@ function appendTextAndInlineInputs(fragment, text) {
 				alert('No result to copy!');
 			}
 		}
+
+		const resultContainer = document.getElementById('resultContainer');
+		const increaseBtn = document.getElementById('increaseFontBtn');
+		const decreaseBtn = document.getElementById('decreaseFontBtn');
+		
+		let currentFontSize = 10; // default font size in px (same as your CSS)
+		
+		function updateFontSize(size) {
+			if (size < 6) size = 6;
+			if (size > 30) size = 30;
+			currentFontSize = size;
+			resultContainer.style.fontSize = currentFontSize + 'px';
+		}
+		
+		increaseBtn.addEventListener('click', () => {
+			updateFontSize(currentFontSize + 1);
+		});
+		
+		decreaseBtn.addEventListener('click', () => {
+			updateFontSize(currentFontSize - 1);
+		});
+
+		// Initialize font size on page load:
+		updateFontSize(currentFontSize);
+
 	</script>
 </body>
 
