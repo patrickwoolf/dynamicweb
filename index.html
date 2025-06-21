@@ -197,70 +197,71 @@
 			}
 		}
 
-		function generateResult() {
-			const dynamicContent = document.getElementById('dynamicContent');
-			const formGroups = dynamicContent.getElementsByClassName('form-group');
-			const resultContainer = document.getElementById('resultContainer');
-			resultContainer.innerHTML = '';
+function generateResult() {
+  const dynamicContent = document.getElementById('dynamicContent');
+  const formGroups = dynamicContent.getElementsByClassName('form-group');
+  const resultContainer = document.getElementById('resultContainer');
+  resultContainer.innerHTML = '';
 
-			for (const formGroup of formGroups) {
-				const textarea = formGroup.querySelector('textarea');
-				const userInput = textarea.value;
-				const contentFragment = document.createDocumentFragment();
-				const lines = userInput.split('\n');
+  for (const formGroup of formGroups) {
+    const textarea = formGroup.querySelector('textarea');
+    const userInput = textarea.value;
+    const contentFragment = document.createDocumentFragment();
+    const lines = userInput.split('\n');
 
-				for (let i = 0; i < lines.length; i++) {
-					if (i > 0) contentFragment.appendChild(document.createElement('br'));
+    for (let i = 0; i < lines.length; i++) {
+      if (i > 0) contentFragment.appendChild(document.createElement('br'));
 
-					const line = lines[i];
-					const regex = /\{([^}]*)\}/g;
-					let match;
-					let lastIndex = 0;
+      const line = lines[i];
+      const regex = /\{([^}]*)\}/g;
+      let match;
+      let lastIndex = 0;
 
-					while ((match = regex.exec(line)) !== null) {
-						contentFragment.appendChild(document.createTextNode(line.substring(lastIndex, match.index)));
+      while ((match = regex.exec(line)) !== null) {
+        const before = line.substring(lastIndex, match.index);
+        appendTextAndInlineInputs(contentFragment, before);
 
-						const rawContent = match[1].trim();
+        const rawContent = match[1].trim();
+        if (rawContent !== '') {
+          const options = rawContent.split(',').map(opt => opt.trim());
+          for (const option of options) {
+            const boxElement = document.createElement('div');
+            boxElement.textContent = option;
+            boxElement.classList.add('selectable-box');
+            boxElement.onclick = () => boxElement.classList.toggle('selected');
+            contentFragment.appendChild(boxElement);
+          }
+        }
+        lastIndex = regex.lastIndex;
+      }
 
-						if (rawContent !== '') {
-							const options = rawContent.split(',').map(opt => opt.trim());
-							for (const option of options) {
-								const boxElement = document.createElement('div');
-								boxElement.textContent = option;
-								boxElement.classList.add('selectable-box');
-								boxElement.onclick = () => boxElement.classList.toggle('selected');
-								contentFragment.appendChild(boxElement);
-							}
-						} else {
-							// Do nothing for empty {}
-						}
+      const remaining = line.substring(lastIndex);
+      appendTextAndInlineInputs(contentFragment, remaining);
+    }
 
-						lastIndex = regex.lastIndex;
-					}
+    const contentElement = document.createElement('p');
+    contentElement.appendChild(contentFragment);
+    resultContainer.appendChild(contentElement);
+  }
+}
 
-					// After processing all {}, also check and replace every ___ with inline textarea
-					let processedLine = line.substring(lastIndex);
-					let parts = processedLine.split('___');
+// 🧩 Helper: Splits text by ___ and inserts styled inline textareas
+function appendTextAndInlineInputs(fragment, text) {
+  const parts = text.split('___');
+  parts.forEach((part, index) => {
+    if (part) fragment.appendChild(document.createTextNode(part));
+    if (index < parts.length - 1) {
+      const input = document.createElement('textarea');
+      input.placeholder = 'Type here...';
+      input.classList.add('inline-textarea');
+      input.addEventListener('input', () => autoResize(input));
+      fragment.appendChild(input);
+    }
+  });
+}
 
-					for (let j = 0; j < parts.length; j++) {
-						contentFragment.appendChild(document.createTextNode(parts[j]));
-						if (j < parts.length - 1) {
-							const inputElement = document.createElement('textarea');
-							inputElement.placeholder = 'Type here...';
-							inputElement.classList.add('inline-textarea');
-							inputElement.addEventListener('input', () => autoResize(inputElement));
-							contentFragment.appendChild(inputElement);
-              //autoResize(inputElement);
-						}
-					}
-				}
 
-				const contentElement = document.createElement('p');
-				contentElement.appendChild(contentFragment);
-				resultContainer.appendChild(contentElement);
-			}
-		}
-
+		
 		function copyResult() {
 			const resultContainer = document.getElementById('resultContainer');
 			const paragraphs = resultContainer.getElementsByTagName('p');
