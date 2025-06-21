@@ -27,7 +27,8 @@
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 			display: inline-block;
 		}
-    .form-group textarea {
+
+		.form-group textarea {
 			width: calc(100% - 30px);
 			padding: 8px;
 			box-sizing: border-box;
@@ -36,7 +37,7 @@
 			resize: none;
 			overflow-y: hidden;
 		}
-		
+
 		label {
 			display: block;
 			font-weight: bold;
@@ -221,13 +222,7 @@
 
 						const rawContent = match[1].trim();
 
-						if (rawContent === '') {
-							const inputElement = document.createElement('textarea');
-							inputElement.placeholder = 'Type here...';
-							inputElement.classList.add('inline-textarea');
-							inputElement.addEventListener('input', () => autoResize(inputElement));
-							contentFragment.appendChild(inputElement);
-						} else {
+						if (rawContent !== '') {
 							const options = rawContent.split(',').map(opt => opt.trim());
 							for (const option of options) {
 								const boxElement = document.createElement('div');
@@ -236,13 +231,27 @@
 								boxElement.onclick = () => boxElement.classList.toggle('selected');
 								contentFragment.appendChild(boxElement);
 							}
+						} else {
+							// Do nothing for empty {}
 						}
 
 						lastIndex = regex.lastIndex;
 					}
 
-					if (lastIndex < line.length) {
-						contentFragment.appendChild(document.createTextNode(line.substring(lastIndex)));
+					// After processing all {}, also check and replace every ___ with inline textarea
+					let processedLine = line.substring(lastIndex);
+					let parts = processedLine.split('___');
+
+					for (let j = 0; j < parts.length; j++) {
+						contentFragment.appendChild(document.createTextNode(parts[j]));
+						if (j < parts.length - 1) {
+							const inputElement = document.createElement('textarea');
+							inputElement.placeholder = 'Type here...';
+							inputElement.classList.add('inline-textarea');
+							inputElement.addEventListener('input', () => autoResize(inputElement));
+							contentFragment.appendChild(inputElement);
+              //autoResize(inputElement);
+						}
 					}
 				}
 
