@@ -26,7 +26,7 @@ PHQ-2:
 3. Attention (serial 3s): {0,1,2}
 4. Acute change: {0,4}
 
-[MMSE] /30 (education level: _____)
+[MMSE] /30 (education level: {})
 Time(5)/Place(5): {0,1,2,3,4,5}/{0,1,2,3,4,5}
 Registration(3)/Recall(3): {0,1,2,3}/{0,1,2,3}
 Attention and calculation(5): {0,1,2,3,4,5}
@@ -35,16 +35,16 @@ Naming(2)/Repeat(1)/Reading(1)/Writing(1): {0,1,2}/{0,1}/{0,1}/{0,1}
 
 [Hemineglect]
 Preferential gaze: {+,-}
-Star cancellation: __/54
+Star cancellation: {}/54
 Bisection test: {normal, impaired}
 Clock drawing: {normal, abnormal}
 Tactile extinction: {+,-}
 
 [Speech & Language]
 Main language: {Mandarin, Taiwanese, Hakka, English}
--LAST-A score: __/15
- Expression index: __/8 Naming {0,1,2,3,4,5}, Repetition {0,1,2}, Auto speech {0,1}
- Receptive index: __/7 Picture {0,1,2,3,4}, Verbal {0,1,2,3}
+-LAST-A score: {}/15
+ Expression index: {}/8 Naming {0,1,2,3,4,5}, Repetition {0,1,2}, Auto speech {0,1}
+ Receptive index: {}/7 Picture {0,1,2,3,4}, Verbal {0,1,2,3}
 -Auditory comprehension: {good, impaired}
  Object/Body part: {correct, incorrect}
 -Expression: {fluent, non-fluent}, {spontaneous, cued}
@@ -75,8 +75,8 @@ Ideational: {+,-}
 
 [Swallowing]
 Feeding: {NG, normal diet without choking}
-Training material: __
-Diet suggestion: __
+Training material: {}
+Diet suggestion: {}
 FOIS score: {1,2,3,4,5,6,7}
 [1：完全無法由口進食
 2：需依賴管灌進食,但偶而能由口嚐試少量食物
@@ -170,7 +170,7 @@ Functional Ambulation Classification (FAC): {0,1,2,3,4,5}
 3級：可以在平坦地面獨立行走，但需要隨時有人在旁監督以確認安全或給予口頭指令  
 4級：可以在平坦地面獨立行走，但行走樓梯、坡度或不平路面需要有人在旁監督。
 5級：可以在各種狀況下獨立行走]
-Timed Up & Go (TUG): __ sec / NA
+Timed Up & Go (TUG): {} sec / NA
 
 [Barthel Index] /100
 Feeding: {0,5,10}/10, Transfer: {0,5,10,15}/15, Grooming: {0,5}/5, Toilet: {0,5,10}/10, Bathing: {0,5}/5, Walking: {0,5,10,15}/15, Stairs: {0,5,10}/10, Dressing: {0,5,10}/10, Bowel: {0,5,10}/10, Bladder: {0,5,10}/10
