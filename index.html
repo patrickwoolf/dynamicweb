@@ -125,7 +125,17 @@
 
 <body>
 	<h1>Dynamic Website Generator</h1>
-
+	<h1>Dynamic Website Generator</h1>
+	<a href="https://github.com/patrickwoolf/dynamicweb" target="_blank">
+		<img id="floatingImage" src="icon.png" alt="Homepage">
+	</a>
+	<i>Patrick Yi-Hong Wu</i>
+	<p>PE: {intact, impaired} <br>↓<br>
+		PE:
+		<span class="selectable-box" onclick="toggleSelected(this)">intact</span>
+		<span class="selectable-box" onclick="toggleSelected(this)">impaired</span>
+	</p>
+	
 	<form id="dynamicForm">
 		<div id="dynamicContent"></div>
 		<button type="button" onclick="addFormGroup()">Add Form</button>
