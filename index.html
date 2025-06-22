@@ -121,46 +121,27 @@
       overflow: hidden;
     }
 
-    /* Floating image box */
-    #floatingBox {
+    #floatingImage {
       position: fixed;
       top: 10px;
       right: 10px;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      background-color: #ffffffcc;
-      padding: 5px 10px;
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    #floatingBox img {
-      width: 24px;
+      width: 6%;
       height: auto;
-    }
-
-    #floatingBox span {
-      margin-left: 8px;
-      font-size: 12px;
-      color: #333;
+      z-index: 1000;
     }
   </style>
 </head>
 
 <body>
   <h1>Dynamic Website Generator</h1>
-
-  <!-- Floating icon + arrow text -->
-  <div id="floatingBox">
-    <a href="https://github.com/patrickwoolf/dynamicweb" target="_blank">
-      <span>copy templates here →</span>
-      <img src="icon.png" alt="Homepage">
-    </a>
-  </div>
+  <a href="https://github.com/patrickwoolf/dynamicweb" target="_blank"
+    style="position: fixed; top: 10px; right: 10px; z-index: 1000; display: flex; align-items: center;">
+    <img id="floatingImage" src="icon.png" alt="Homepage" />
+    <span style="margin-left: 8px; font-size: 12px; color: #333;">→ copy templates here →</span>
+  </a>
 
   <i>Patrick Yi-Hong Wu</i>
-  <p>PE: {intact, impaired} <br>↓<br>
+  <p>PE: {intact, impaired} <br />↓<br />
     PE:
     <span class="selectable-box" onclick="toggleSelected(this)">intact</span>
     <span class="selectable-box" onclick="toggleSelected(this)">impaired</span>
@@ -178,6 +159,7 @@
   </div>
 
   <div id="resultContainer"></div>
+
   <button type="button" onclick="copyResult()">Copy Result</button>
 
   <script>
@@ -188,154 +170,224 @@
     });
 
     async function loadDefaultContent() {
-      const dynamicContent = document.getElementById('dynamicContent');
-      const hasSavedData = Object.keys(localStorage).some(key => key.startsWith('textarea'));
+      const hasSavedData = Object.keys(localStorage)
+        .filter(key => key.startsWith('textarea'))
+        .some(key => localStorage.getItem(key).trim().length > 0);
 
-      if (hasSavedData) return;
+      if (hasSavedData) {
+        // Skip loading default if saved data exists
+        return;
+      }
 
       try {
-        const res = await fetch('CVA-consult.txt');
-        if (!res.ok) throw new Error(res.statusText);
-        const txt = await res.text();
+        const response = await fetch('CVA-consult.txt');
+        if (!response.ok) throw new Error('Network response was not ok');
 
-        let fg = dynamicContent.firstElementChild;
-        if (!fg) { addFormGroup(); fg = dynamicContent.firstElementChild; }
+        const text = await response.text();
 
-        const ta = fg.querySelector('textarea');
-        ta.value = txt;
-        autoResize(ta);
-        saveValueToLocalStorage(ta);
-      } catch (e) { console.error(e); }
+        const dynamicContent = document.getElementById('dynamicContent');
+        let formGroup = dynamicContent.firstElementChild;
+
+        if (!formGroup) {
+          addFormGroup();
+          formGroup = dynamicContent.firstElementChild;
+        }
+
+        const textarea = formGroup.querySelector('textarea');
+        textarea.value = text;
+        autoResize(textarea);
+        saveValueToLocalStorage(textarea);
+      } catch (error) {
+        console.error('Error loading default content:', error);
+      }
     }
 
     function addFormGroup() {
-      const dc = document.getElementById('dynamicContent');
-      const fg = document.createElement('div');
-      fg.classList.add('form-group');
+      const dynamicContent = document.getElementById('dynamicContent');
+      const formGroup = document.createElement('div');
+      formGroup.classList.add('form-group');
 
-      const lbl = document.createElement('label');
-      lbl.textContent = 'Enter your content:';
+      const label = document.createElement('label');
+      label.textContent = 'Enter your content:';
 
-      const ta = document.createElement('textarea');
-      ta.placeholder = 'Type here...';
-      ta.id = 'textarea' + dc.childElementCount;
-      ta.addEventListener('input', () => { autoResize(ta); saveValueToLocalStorage(ta); });
+      const textarea = document.createElement('textarea');
+      textarea.placeholder = 'Type here...';
+      textarea.id = 'textarea' + dynamicContent.childElementCount;
+      textarea.addEventListener('input', function () {
+        autoResize(this);
+        saveValueToLocalStorage(this);
+      });
 
-      const del = document.createElement('button');
-      del.textContent = 'x';
-      del.classList.add('delete-button');
-      del.onclick = () => { dc.removeChild(fg); localStorage.removeItem(ta.id); };
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'x';
+      deleteButton.classList.add('delete-button');
+      deleteButton.onclick = function () {
+        dynamicContent.removeChild(formGroup);
+        localStorage.removeItem(textarea.id);
+      };
 
-      fg.append(lbl, ta, del);
-      dc.appendChild(fg);
+      formGroup.appendChild(label);
+      formGroup.appendChild(textarea);
+      formGroup.appendChild(deleteButton);
+      dynamicContent.appendChild(formGroup);
     }
 
-    function autoResize(ta) {
-      ta.style.height = 'auto';
-      ta.style.height = ta.scrollHeight + 'px';
-      if (ta.classList.contains('inline-textarea')) {
-        ta.style.width = (ta.scrollWidth + 5) + 'px';
+    function autoResize(textarea) {
+      textarea.style.height = 'auto';
+      textarea.style.height = textarea.scrollHeight + 'px';
+
+      if (textarea.classList.contains('inline-textarea')) {
+        textarea.style.width = '50px';
+        textarea.style.width = (textarea.scrollWidth + 5) + 'px';
       }
     }
 
-    function saveValueToLocalStorage(ta) {
-      localStorage.setItem(ta.id, ta.value);
+    function saveValueToLocalStorage(textarea) {
+      localStorage.setItem(textarea.id, textarea.value);
     }
 
     function loadSavedValues() {
-      const dcs = document.getElementById('dynamicContent').getElementsByClassName('form-group');
-      for (const fg of dcs) {
-        const ta = fg.querySelector('textarea');
-        const v = localStorage.getItem(ta.id);
-        if (v !== null) { ta.value = v; autoResize(ta); }
-      }
-    }
+      const dynamicContent = document.getElementById('dynamicContent');
+      const formGroups = dynamicContent.getElementsByClassName('form-group');
 
-    function toggleSelected(el) {
-      el.classList.toggle('selected');
+      for (const formGroup of formGroups) {
+        const textarea = formGroup.querySelector('textarea');
+        const savedValue = localStorage.getItem(textarea.id);
+        if (savedValue !== null) {
+          textarea.value = savedValue;
+          autoResize(textarea);
+        }
+      }
     }
 
     function generateResult() {
-      const rc = document.getElementById('resultContainer');
-      rc.innerHTML = '';
-      const groups = document.getElementById('dynamicContent').getElementsByClassName('form-group');
+      const dynamicContent = document.getElementById('dynamicContent');
+      const formGroups = dynamicContent.getElementsByClassName('form-group');
+      const resultContainer = document.getElementById('resultContainer');
+      resultContainer.innerHTML = '';
 
-      for (const fg of groups) {
-        const ta = fg.querySelector('textarea');
-        const frag = document.createDocumentFragment();
-        const lines = ta.value.split('\n');
+      for (const formGroup of formGroups) {
+        const textarea = formGroup.querySelector('textarea');
+        const userInput = textarea.value;
+        const contentFragment = document.createDocumentFragment();
+        const lines = userInput.split('\n');
 
         for (let i = 0; i < lines.length; i++) {
-          if (i > 0) frag.appendChild(document.createElement('br'));
+          if (i > 0) contentFragment.appendChild(document.createElement('br'));
+
           const line = lines[i];
           const regex = /\{([^}]*)\}/g;
-          let match, last = 0;
+          let match;
+          let lastIndex = 0;
 
-          while ((match = regex.exec(line))) {
-            appendFragment(frag, line.slice(last, match.index));
-            const opts = match[1].trim().split(',').map(s => s.trim());
-            opts.forEach(o => {
-              const b = document.createElement('div');
-              b.textContent = o;
-              b.classList.add('selectable-box');
-              b.onclick = () => b.classList.toggle('selected');
-              frag.appendChild(b);
-            });
-            last = regex.lastIndex;
+          while ((match = regex.exec(line)) !== null) {
+            const before = line.substring(lastIndex, match.index);
+            appendTextAndInlineInputs(contentFragment, before);
+
+            const rawContent = match[1].trim();
+            if (rawContent !== '') {
+              const options = rawContent.split(',').map(opt => opt.trim());
+              for (const option of options) {
+                const boxElement = document.createElement('div');
+                boxElement.textContent = option;
+                boxElement.classList.add('selectable-box');
+                boxElement.onclick = () => boxElement.classList.toggle('selected');
+                contentFragment.appendChild(boxElement);
+              }
+            }
+            lastIndex = regex.lastIndex;
           }
-          appendFragment(frag, line.slice(last));
+
+          const remaining = line.substring(lastIndex);
+          appendTextAndInlineInputs(contentFragment, remaining);
         }
 
-        const p = document.createElement('p');
-        p.appendChild(frag);
-        rc.appendChild(p);
+        const contentElement = document.createElement('p');
+        contentElement.appendChild(contentFragment);
+        resultContainer.appendChild(contentElement);
       }
     }
 
-    function appendFragment(f, text) {
+    // 🧩 Helper: Splits text by ___ and inserts styled inline textareas
+    function appendTextAndInlineInputs(fragment, text) {
       const parts = text.split('___');
-      parts.forEach((pt, i) => {
-        if (pt) f.appendChild(document.createTextNode(pt));
-        if (i < parts.length - 1) {
-          const it = document.createElement('textarea');
-          it.placeholder = 'Type here...';
-          it.classList.add('inline-textarea');
-          it.addEventListener('input', () => autoResize(it));
-          f.appendChild(it);
+      parts.forEach((part, index) => {
+        if (part) fragment.appendChild(document.createTextNode(part));
+        if (index < parts.length - 1) {
+          const input = document.createElement('textarea');
+          input.placeholder = 'Type here...';
+          input.classList.add('inline-textarea');
+          input.addEventListener('input', () => autoResize(input));
+          fragment.appendChild(input);
         }
       });
     }
 
     function copyResult() {
-      const ps = document.getElementById('resultContainer').getElementsByTagName('p');
-      let out = '';
+      const resultContainer = document.getElementById('resultContainer');
+      const paragraphs = resultContainer.getElementsByTagName('p');
+      let copiedContent = '';
 
-      for (const p of ps) {
-        let node = p.firstChild, line = '';
+      for (const paragraph of paragraphs) {
+        let lineText = '';
+        let node = paragraph.firstChild;
+
         while (node) {
-          if (node.nodeType === Node.TEXT_NODE) line += node.nodeValue;
-          else if (node.tagName === 'DIV' && node.classList.contains('selected')) line += node.textContent;
-          else if (node.tagName === 'TEXTAREA') line += node.value;
-          else if (node.tagName === 'BR') line += '\n';
+          if (node.nodeType === Node.TEXT_NODE) {
+            lineText += node.nodeValue;
+          } else if (node.tagName === 'DIV' && node.classList.contains('selected')) {
+            lineText += node.textContent.trim();
+          } else if (node.tagName === 'TEXTAREA') {
+            lineText += node.value.trim();
+          } else if (node.tagName === 'BR') {
+            lineText += '\n';
+          }
           node = node.nextSibling;
         }
-        out += line.trim() + '\n';
+        copiedContent += lineText.trim() + '\n';
       }
 
-      if (out.trim()) {
-        navigator.clipboard.writeText(out).then(() => alert('Copied:\n' + out));
-      } else alert('No result to copy!');
+      if (copiedContent.trim()) {
+        const temp = document.createElement('textarea');
+        temp.value = copiedContent;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
+        alert('Copied:\n' + copiedContent);
+      } else {
+        alert('No result to copy!');
+      }
     }
 
-    // Font controls
-    const rc = document.getElementById('resultContainer');
-    const inc = document.getElementById('increaseFontBtn');
-    const dec = document.getElementById('decreaseFontBtn');
-    let fz = 10;
-    const update = s => { fz = Math.min(30, Math.max(6, s)); rc.style.fontSize = fz + 'px'; };
-    inc.addEventListener('click', () => update(fz + 1));
-    dec.addEventListener('click', () => update(fz - 1));
-    update(fz);
+    const resultContainer = document.getElementById('resultContainer');
+    const increaseBtn = document.getElementById('increaseFontBtn');
+    const decreaseBtn = document.getElementById('decreaseFontBtn');
+
+    let currentFontSize = 10; // default font size in px (same as your CSS)
+
+    function updateFontSize(size) {
+      if (size < 6) size = 6;
+      if (size > 30) size = 30;
+      currentFontSize = size;
+      resultContainer.style.fontSize = currentFontSize + 'px';
+    }
+
+    increaseBtn.addEventListener('click', () => {
+      updateFontSize(currentFontSize + 1);
+    });
+
+    decreaseBtn.addEventListener('click', () => {
+      updateFontSize(currentFontSize - 1);
+    });
+
+    // Initialize font size on page load:
+    updateFontSize(currentFontSize);
+
+    // Helper for selectable boxes on main page
+    function toggleSelected(el) {
+      el.classList.toggle('selected');
+    }
   </script>
 </body>
 
