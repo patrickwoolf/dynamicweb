@@ -167,6 +167,29 @@
 			loadSavedValues();
 		});
 
+  async function loadDefaultContent() {
+  	const dynamicContent = document.getElementById('dynamicContent');
+
+  	try {
+  		const response = await fetch('CVA-consult.txt');
+	  	if (!response.ok) throw new Error('Network response was not ok');
+
+	  	const text = await response.text();
+  
+	  	const formGroup = dynamicContent.firstElementChild || addFormGroup();
+	  	const textarea = formGroup.querySelector('textarea');
+
+	  	textarea.value = text;
+	  	autoResize(textarea);
+	  	saveValueToLocalStorage(textarea);
+  	} catch (error) {
+	  	console.error('Error loading default content:', error);
+  	}
+  }
+
+  // Run after loading saved values
+  loadDefaultContent();
+		
 		function addFormGroup() {
 			const dynamicContent = document.getElementById('dynamicContent');
 			const formGroup = document.createElement('div');
@@ -350,29 +373,6 @@ function appendTextAndInlineInputs(fragment, text) {
 
 		// Initialize font size on page load:
 		updateFontSize(currentFontSize);
-
-  async function loadDefaultContent() {
-  	const dynamicContent = document.getElementById('dynamicContent');
-
-  	try {
-  		const response = await fetch('CVA-consult.txt');
-	  	if (!response.ok) throw new Error('Network response was not ok');
-
-	  	const text = await response.text();
-  
-	  	const formGroup = dynamicContent.firstElementChild || addFormGroup();
-	  	const textarea = formGroup.querySelector('textarea');
-
-	  	textarea.value = text;
-	  	autoResize(textarea);
-	  	saveValueToLocalStorage(textarea);
-  	} catch (error) {
-	  	console.error('Error loading default content:', error);
-  	}
-  }
-
-  // Run after loading saved values
-  loadDefaultContent();
 
 
 	</script>
