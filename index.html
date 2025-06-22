@@ -165,29 +165,38 @@
 		document.addEventListener("DOMContentLoaded", function () {
 			addFormGroup();
 			loadSavedValues();
+			LoadDefaultContent();
 		});
 
-  async function loadDefaultContent() {
-  	const dynamicContent = document.getElementById('dynamicContent');
+async function loadDefaultContent() {
+	const dynamicContent = document.getElementById('dynamicContent');
+	const hasSavedData = Object.keys(localStorage).some(key => key.startsWith('textarea'));
 
-  	try {
-  		const response = await fetch('CVA-consult.txt');
-	  	if (!response.ok) throw new Error('Network response was not ok');
+	if (hasSavedData) {
+		// Don't load template if there is saved content
+		return;
+	}
 
-	  	const text = await response.text();
-  
-	  	const formGroup = dynamicContent.firstElementChild || addFormGroup();
-	  	const textarea = formGroup.querySelector('textarea');
+	try {
+		const response = await fetch('CVA-consult.txt');
+		if (!response.ok) throw new Error('Network response was not ok');
 
-	  	textarea.value = text;
-	  	autoResize(textarea);
-  	} catch (error) {
-	  	console.error('Error loading default content:', error);
-  	}
-  }
+		const text = await response.text();
 
-  // Run after loading saved values
-  loadDefaultContent();
+		let formGroup = dynamicContent.firstElementChild;
+		if (!formGroup) {
+			addFormGroup();
+			formGroup = dynamicContent.firstElementChild;
+		}
+
+		const textarea = formGroup.querySelector('textarea');
+		textarea.value = text;
+		autoResize(textarea);
+		saveValueToLocalStorage(textarea);
+	} catch (error) {
+		console.error('Error loading default content:', error);
+	}
+}
 		
 		function addFormGroup() {
 			const dynamicContent = document.getElementById('dynamicContent');
