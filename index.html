@@ -161,16 +161,16 @@
     async function loadDefaultContent() {
       const textarea0 = localStorage.getItem('textarea0');
       if (textarea0 && textarea0.trim() !== "") {
-        alert("✔️ textarea0 already has content — skipping default.");
+        //alert("✔️ textarea0 already has content — skipping default.");
         return;
       }
 
       try {
         const res = await fetch('CVA-consult.txt');
-        alert(`📥 Fetch status: ${res.status}`);
+        //alert(`📥 Fetch status: ${res.status}`);
         if (!res.ok) throw new Error(res.statusText);
         const txt = await res.text();
-        alert(`✅ Loaded template (${txt.length} characters).`);
+        //alert(`✅ Loaded template (${txt.length} characters).`);
 
         let fg = document.getElementById('dynamicContent').firstElementChild;
         if (!fg) { addFormGroup(); fg = document.getElementById('dynamicContent').firstElementChild; }
@@ -180,7 +180,7 @@
         autoResize(ta);
         saveValueToLocalStorage(ta);
       } catch (err) {
-        alert("❌ Error loading default: " + err.message);
+        //alert("❌ Error loading default: " + err.message);
         console.error(err);
       }
     }
