@@ -51,8 +51,8 @@ Knee: {0,1,1+,2,3}
 Light touch: {intact, impaired, unable to assess}
 
 [Sphincter Function]
-Defecation: {continent, incontinent} with diaper use} ___
-Urination: {continent, incontinent} with Foley catheter, diaper use} ___
+Defecation: {continent, incontinent} with {commode, diaper use} ___
+Urination: {continent, incontinent} with {Foley catheter, diaper use} ___
 
 [Functional Status]
 Current status: {bedrest (ICU setting), wheelchair, ambulatory with aid, independent ambulation}
