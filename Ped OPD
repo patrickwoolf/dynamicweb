@@ -14,16 +14,15 @@ Perinatal history: {uneventful} ___
 Hospitalization: {none} ___  
 OPD follow-up: {yes, no}  
 OAE: {passed, failed}  
-Vision/Hearing: ___  
+Vision: ___  
 ___  
 
 [Family Info]  
 Father: ___ y, Education: ___, Occupation: ___  
 Mother: ___ y, Education: ___, Occupation: ___  
 Siblings: ___  
-Caregiver: {parent, nanny (day, night, 24hr, weekday), other}  
+Caregiver: {parent} {nanny (day)} {nanny (night)} {nanny (24hr)} {nanny (weekday)}
 How cared for: {basic care, play together, read books regularly, go to parenting center, go to park, other}  
-Ask for more info from: {teachers, co-living family, others}  
 ___  
 
 [Developmental Milestones]  
@@ -53,7 +52,7 @@ Performance: {academic, PE, other} ___
 Regular early intervention: {yes, no}  
 ___  
 
-[PE Observation in Clinic]  
+[PE summary]  
 Eye contact: {present, absent}  
 Joint attention: {present, absent}  
 Behavior: {follow command, not follow command, take things without asking, fidgeting, stable mood, labile mood, fair activity level}  
@@ -76,86 +75,13 @@ Copy square (~4y): {yes, no}
 Copy triangle (~5y): {yes, no}  
 ___  
 
-[Cognition]  
-{7–9m:} {Object permanence}  
-{1y:} {Functional play}  
-{1.5y:} {Match simple shapes (2 items)}  
-{1.5y:} {Point for needs}  
-{1.5y:} {Name 1 body part}  
-{2y:} {Sort colors, find items, feed doll with spoon}  
-{3y:} {Abstract concepts (big/small, many/few), pretend play, point to most body parts, attention span 3–5 min}  
-{4y:} {Name common colors, start counting, complex pretend play}  
-{5y:} {Count to 10, time concept, attention span 20-30 min}  
-___  
-
-[Social Development]  
-Mood/Interaction/Attention/Stranger anxiety/Compliance/Adjustment: ___  
-Follows rules: {yes, no}  
-Interested in peers: {yes, no}  
-Restricted repetitive behaviors/interests (RRBI): {yes, no}  
-___  
-
-Milestones:  
-{Stare at face (1m)}  
-{Smile at face (3m)}  
-{Resist toy pulling (5m)}  
-{Recognize family (6m)}  
-{Peek-a-boo smile/response (9m)}  
-{Point (9m)}  
-{Wave bye (12m)}  
-{Imitation (12m)}  
-{Stranger anxiety (12m)}  
-{Compete for toys (18m)}  
-{Solitary play (2y)}  
-{Share with peers (2y)}  
-{Parallel play (3y)}  
-{Group play (3y)}  
-{Take turns (3y)}  
-{Cooperative play (4y)}  
-{Can be reasoned with (3y)}  
-___  
-
-[Speech & Swallowing - Articulation]  
-Four tones: {yes, no}  
-Words: pass {蘋果, 狗, 魚, 正方形, 圈圈, 飛機, 葡萄, 蛋糕, 草莓, 西瓜, 松鼠, 早安, 風箏, 兔寶寶, 佩佩豬}, fail {蘋果, 狗, 魚, 正方形, 圈圈, 飛機, 葡萄, 蛋糕, 草莓, 西瓜, 松鼠, 早安, 風箏, 兔寶寶, 佩佩豬}  
-Consonants: pass {ㄅㄆ, ㄉㄊ, ㄍㄎ, ㄒㄐ, ㄗㄘㄙ, PTK}, fail {ㄅㄆ, ㄉㄊ, ㄍㄎ, ㄒㄐ, ㄗㄘㄙ, PTK}  
-Mouth open/close: {yes, no}  
-AIU vowels: {yes, no}  
-5s saliva swallowing: {yes, no}  
-3ml water swallowing: {yes, no}  
-___  
-
-[Speech Development]  
-你們搭什麼交通工具來的呢？ 
-衣服上是什麼？
-佩佩豬身上有什麼？跟喬治在做什麼？
-{Quiet / Parent-child reading}  
-{Laugh sound (~2m), scream (~3m), turn to sound (~5m)}  
-{Make vowel sounds (~6m), meaningless sounds (~6m)}  
-{Understand "no" (~9m), meaningful Papa/Mama (~12m), respond to name (~12m)}  
-___  
-
-Comprehension:  
-{1.5y:} {Understand facial parts (at least 1), partial instructions}  
-{2y:} {Yes/no questions, 1-step command, ID simple picture}  
-{3y:} {2-step command}  
-{4y:} {3+ step command}  
-___  
-
-Expression – Vocabulary: {<50, >50}  
-{1.5y:} {echolalia , Call parents, 10 words, point for needs}  
-{2y:} {Picture naming, imitate nursery song, 2-word phrases}  
-{3y:} {4–5 word sentences, ask questions, answer age/gender/name, pronouns}  
-{4y:} {Complete sentences, tell parts of stories, ask "why"}  
-{5y:} {Open questions, complete storytelling}  
-___  
-
 [Motor Exam]  
-MP: {spasticity, DTR, Babinski sign, muscle tone, ROM, Gower sign}  
+MP: spasticity ___, DTR ___, Babinski sign ___, muscle tone ___, ROM ___, Gower sign ___  
 Motor Stage: {isolated movements present, not present}  
 ___  
 
 < Gross Motor >  
+Able to 
 - {Lift head in prone (45°=1; 90°=2)}  
 - {Roll to side (3m), prone (6m)}  
 - {Head control sitting (3m)}  
@@ -174,6 +100,7 @@ ___
 ___  
 
 < Fine Motor >  畫形狀
+Able to 
 - {Hand to midline (3m), grasp things (3m)}  
 - {Reach with one hand (3m), object to mouth (3m)}  
 - {Transfer toy (6m), palm grasp small object (6m)}  
@@ -200,7 +127,87 @@ Dynamic:
 - Tandem gait: {intact, impaired}  
 ___  
 
+[Cognition]  
+Able to 
+{7–9m:} {Object permanence}  
+{1y:} {Functional play}  
+{1.5y:} {Match simple shapes (2 items)}  
+{1.5y:} {Point for needs}  
+{1.5y:} {Name 1 body part}  
+{2y:} {Sort colors, find items, feed doll with spoon}  
+{3y:} {Abstract concepts (big/small, many/few), pretend play, point to most body parts, attention span 3–5 min}  
+{4y:} {Name common colors, start counting, complex pretend play}  
+{5y:} {Count to 10, time concept, attention span 20-30 min}  
+___  
+
+[Social Development]  
+Mood ___/Interaction ___/Attention ___/Stranger anxiety ___/Compliance ___/Adjustment: ___  
+Follows rules: {yes, no}  
+Interested in peers: {yes, no}  
+Restricted repetitive behaviors/interests (RRBI): {yes, no}  
+___  
+
+Milestones:  
+Able to 
+{Stare at face (1m)}  
+{Smile at face (3m)}  
+{Resist toy pulling (5m)}  
+{Recognize family (6m)}  
+{Peek-a-boo smile/response (9m)}  
+{Point (9m)}  
+{Wave bye (12m)}  
+{Imitation (12m)}  
+{Stranger anxiety (12m)}  
+{Compete for toys (18m)}  
+{Solitary play (2y)}  
+{Share with peers (2y)}  
+{Parallel play (3y)}  
+{Group play (3y)}  
+{Take turns (3y)}  
+{Cooperative play (4y)}  
+{Can be reasoned with (3y)}  
+___  
+
+[Speech & Swallowing - Articulation]  
+Four tones: {yes, no}  
+Words: pass {蘋果, 狗, 魚, 正方形, 圈圈, 飛機, 葡萄, 蛋糕, 草莓, 西瓜, 松鼠, 早安, 風箏, 兔寶寶, 佩佩豬}, fail {蘋果, 狗, 魚, 正方形, 圈圈, 飛機, 葡萄, 蛋糕, 草莓, 西瓜, 松鼠, 早安, 風箏, 兔寶寶, 佩佩豬}  
+Consonants: {ㄅㄆ, ㄉㄊ, ㄍㄎ, ㄒㄐ, ㄗㄘㄙ, PTK}
+Mouth open/close: {yes, no}  
+AIU vowels: {yes, no}  
+5s saliva swallowing: {yes, no}  
+3ml water swallowing: {yes, no}  
+___  
+
+[Speech Development]  
+你們搭什麼交通工具來的呢？ 
+衣服上是什麼？
+佩佩豬身上有什麼？跟喬治在做什麼？
+{Quiet, Parent-child reading}  
+Able to 
+{Laugh sound (~2m), scream (~3m), turn to sound (~5m)}  
+{Make vowel sounds (~6m), meaningless sounds (~6m)}  
+{Understand "no" (~9m), meaningful Papa/Mama (~12m), respond to name (~12m)}  
+___  
+
+Comprehension:  
+Able to 
+{1.5y:} {Understand facial parts (at least 1), partial instructions}  
+{2y:} {Yes/no questions, 1-step command, ID simple picture}  
+{3y:} {2-step command}  
+{4y:} {3+ step command}  
+___  
+
+Expression – Vocabulary: {<50, >50}  
+Able to 
+{1.5y:} {echolalia , Call parents, 10 words, point for needs}  
+{2y:} {Picture naming, imitate nursery song, 2-word phrases}  
+{3y:} {4–5 word sentences, ask questions, answer age/gender/name, pronouns}  
+{4y:} {Complete sentences, tell parts of stories, ask "why"}  
+{5y:} {Open questions, complete storytelling}  
+___  
+
 [ADL]  
+Able to 
 - {Drink from cup neatly (18m)}  
 - {Remove clothes (18m)}  
 - {Use spoon (2y), put on clothes (2y)}  
@@ -216,7 +223,7 @@ ___
 4. If ASD suspected: refer neurologist + psychiatrist  
 5. If developmental delay/MR suspected: refer neurologist  
 6. If initial development was normal but regressed: refer neurologist for possible diagnostic issues  
-Attending: {R2 吳一宏 / VS 林家瑋 / ___}  
+Attending: {R2 吳一宏 / VS 林家瑋} ___
 
 
 [If ADHD/ASD traits suspected, assess further below]
