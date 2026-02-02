@@ -1,9 +1,41 @@
+
+[Present illness]
+{loss of consciousness, impaired cognition}
+{myoclonus, hypertone, muscle twitching}
+{bladder incontinence, bowel incontinence}
+{slurred speech, difficulty swallowing}
+{loss of verbal output, cannot follow verbal commands}
+___
+
+[Family History:] ___
+
+[Premorbid]
+Living environment: ___ with ___
+Occupation: ___
+Education: ___
+Caregiver: {院看, 巴氏} ___
+Ambulation: {community without device, community, indoor}{ with cane, with walker}
+ADLs: {independent, dependent with heavy hygiene}
+
 [Physical Examination]
 Vital signs: {Stable, Unstable}
 O2 demand: SPO2: >92% with {RA,NC,NRM,BiPAP}
+
 Consciousness: E{1,2,3,4}V{1,2,3,4,5}M{1,2,3,4,5,6}, {alert, drowsy, stuporous, coma}
-Cognition: {intact, poor cognition, fluctuating, not assessable}, due to {drowsy state, medication effect, ___}
-Tubes: {Foley catheter, nasogastric tube, central line, none, ___}
+Cognition: {intact, poor cognition, fluctuating, not assessable due to} {drowsy state, medication effect} ___
+Tubes: {Foley catheter, nasogastric tube, central line, none} ___
+
+Rancho Los Amigos (if TBI): Level {I,II,III,IV,V,VI,VII,VIII}
+ Level I: No Response
+ Level II: Generalized Response
+ Level III: Localized Response
+ Level IV: Confused-agitated
+ Level V: Confused-inappropriate, non-Agitated, maximal assistance 
+          (f/u Simple order + 自我照顧 under assistance)
+ Level VI: Confused-appropriate, moderate assistance
+           (Social interaction但impaired judgement)
+ Level VII: Automatic-appropriate, minimal assistance in ADL (goal-directed)
+ Level VIII: Purposeful-appropriate, standby assistance
 
 [Cranial Nerves]
 CN II: visual acuity {intact, impaired}, visual field {intact, impaired}
@@ -30,15 +62,14 @@ Swallowing:
 - Multiple swallows: {+, -}
 
 [Motor Status]
-Muscle Strength (MMT):
-RUE: {0,1,2,3,4,5}
-LUE: {0,1,2,3,4,5}
-RLE: {0,1,2,3,4,5}
-LLE: {0,1,2,3,4,5}
+Brunnstrom: 
+ {R,L}UE(P/D): {I,II,III,IV,V}/{I,II,III,IV,V}, LE: {I,II,III,IV,V}
+MMT: 
+ RUE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}, RLE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}
+ LUE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}, LLE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}
 
-Brunnstrom Stage:
-{R,L}UE (P/D): {I,II,III,IV,V} / {I,II,III,IV,V}
-LE: {I,II,III,IV,V}
+___
+
 
 Deep Tendon Reflexes (DTR):
 Right / Left: {+,++,+++,++++} / {+,++,+++,++++}
@@ -51,10 +82,10 @@ Knee: {0,1,1+,2,3}
 Light touch: {intact, impaired, unable to assess}
 
 [Sphincter Function]
-Defecation: {continent, incontinent} with {commode, diaper use} ___
-Urination: {continent, incontinent} with {Foley catheter, diaper use} ___
+Defecation: {continent, incontinent} {commode, diaper use} ___
+Urination: {continent, incontinent} {Foley catheter, diaper use} ___
 
 [Functional Status]
-Current status: {bedrest (ICU setting), wheelchair, ambulatory with aid, independent ambulation}
+Current status: {bedrest, wheelchair, ambulatory with aid, independent ambulation}
 BADLs: {independent, partially dependent, totally dependent}
 Modified Rankin Scale (mRS): {0,1,2,3,4,5}
