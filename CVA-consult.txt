@@ -24,21 +24,19 @@ Consciousness: E{1,2,3,4}V{1,2,3,4,5}M{1,2,3,4,5,6}, {alert, drowsy, stuporous, 
 Cognition: {intact, poor cognition, fluctuating, not assessable due to} {drowsy state, medication effect} ___
 Tubes: {Foley catheter, nasogastric tube, central line, none} ___
 
-Rancho Los Amigos (if TBI): Level {I,II,III,IV,V,VI,VII,VIII}
- Level I: No Response
- Level II: Generalized Response
- Level III: Localized Response
- Level IV: Confused-agitated
- Level V: Confused-inappropriate, non-Agitated, maximal assistance 
-          (f/u Simple order + 自我照顧 under assistance)
- Level VI: Confused-appropriate, moderate assistance
-           (Social interaction但impaired judgement)
- Level VII: Automatic-appropriate, minimal assistance in ADL (goal-directed)
- Level VIII: Purposeful-appropriate, standby assistance
+{Rancho Los Amigos (if TBI):}
+{ Level I: No Response}
+{ Level II: Generalized Response}
+{ Level III: Localized Response}
+{ Level IV: Confused-agitated}
+{ Level V: Confused-inappropriate; non-Agitated; maximal assistance (f/u Simple order + 自我照顧 under assistance)}
+{ Level VI: Confused-appropriate; moderate assistance (Social interaction 但 impaired judgement)}
+{ Level VII: Automatic-appropriate; minimal assistance in ADL (goal-directed)}
+{ Level VIII: Purposeful-appropriate; standby assistance}
 
 [Cranial Nerves]
 CN II: visual acuity {intact, impaired}, visual field {intact, impaired}
-CN III/IV/VI: pupils 3/3 mm, light reflex R/L: {+/+}, ptosis: {+,-}, EOM: {full, restricted}
+CN III/IV/VI: pupils 3/3 mm, light reflex R/L: {+,-}/{+,-}, ptosis: {+,-}, EOM: {full, restricted}
 CN V: facial sensation {intact, impaired}
 CN VII: facial palsy {+,-}
 CN VIII: VOR {intact, impaired}
@@ -66,23 +64,32 @@ Brunnstrom:
 MMT: 
  RUE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}, RLE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}
  LUE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}, LLE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}
+{C5678T1 ////}
+{L2345S1 ////}
+Hoffman signs: R/L= {+,-}/{+,-}
+Babinski sign: R/L= {+,-}/{+,-}
 
-___
+Sensation: (R/L) {Difficult to assess/could not clearly express the impairment level}
+Light touch: {intact, impaired, unable to assess} on {RUE} {LUE} {RLE} {LLE}
+{Intact: C2-}___{/C2-}___
+{Impaired:} ___
+{Absent:} ___
 
+Deep Tendon Reflexes (DTR): Right / Left
+ Biceps: {+,++,+++,++++} / {+,++,+++,++++}
+ Knee: {+,++,+++,++++} / {+,++,+++,++++}
+Spasticity(MAS): {nil}
+ Elbow: {0, 1, 1+, 2, 3}
+ Knee: {0, 1, 1+, 2, 3}
 
-Deep Tendon Reflexes (DTR):
-Right / Left: {+,++,+++,++++} / {+,++,+++,++++}
-
-Spasticity (MAS):
-Elbow: {0,1,1+,2,3}
-Knee: {0,1,1+,2,3}
-
-[Sensation]
-Light touch: {intact, impaired, unable to assess}
+Anal sensation: {present, impaired, absent}
+Anal tone: {tight, loose}
+Anus voluntary contraction: {present, impaired}
+Bulbocavernosus reflex: {present, impaired}
 
 [Sphincter Function]
-Defecation: {continent, incontinent} {commode, diaper use} ___
-Urination: {continent, incontinent} {Foley catheter, diaper use} ___
+Defecation: {continent, incontinent} {with commode, diaper use} ___
+Urination: {continent, incontinent} {with Foley catheter, diaper use} ___
 
 [Functional Status]
 Current status: {bedrest, wheelchair, ambulatory with aid, independent ambulation}
@@ -105,7 +112,7 @@ Goals:
 Caregiver training
 Transfer with {contact guard, supervision, minimal assistance, moderate assistance, maximal assistance}
 Ambulation with {walker, wheelwalker, unicane, quadricane} under {contact guard, supervision, minimal assistance, moderate assistance, maximal assistance}
-BADLs with {assistance, independence and partial assistance with} {toileting}{; bathing}
+BADLs with {assistance, independence and partial assistance with} {toileting} {bathing}
 {Increased oral feeding efficiency and remove NG tube as possible after adequate oral intake}
 {Achieve functional communication}
 {Improved dysarthria}
