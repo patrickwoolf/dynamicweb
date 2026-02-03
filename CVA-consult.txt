@@ -1,4 +1,3 @@
-
 [Present illness]
 {loss of consciousness, impaired cognition}
 {myoclonus, hypertone, muscle twitching}
@@ -89,3 +88,24 @@ Urination: {continent, incontinent} {Foley catheter, diaper use} ___
 Current status: {bedrest, wheelchair, ambulatory with aid, independent ambulation}
 BADLs: {independent, partially dependent, totally dependent}
 Modified Rankin Scale (mRS): {0,1,2,3,4,5}
+
+---
+Plan:
+{1. We will arrange rehabilitation programs including}
+{Physical therapy: 物理治療評估; Facilitation techniques; Passive ROM; Ambulation training; Therapeutic Exercise; Strengthening training; Endurance training} 
+{Occupational therapy: 職能治療評估; ADL training; U/E or L/E function training; Transfer training; Balance training},{ Anterior type AFO, Posterior type AFO} 
+{Speech therapy:} {吞嚥治療評估 and 吞嚥治療} {語言治療評估;Verbal production;Augmentative communication;Oral Treatment;Oral motor training}  
+
+{Please contact us for further ST arrangement if the patient is able to follow orders more consistently at daytime > 8 hrs a day with stable medical conditions.}
+
+{2. Suggest further rehabilitation via OPD.}
+{2. The patient is indicated for further in-patient rehabilitation. Please contact us if the patient agrees and is ready for bed transfer.}
+
+Goals:
+Caregiver training
+Transfer with {contact guard, supervision, minimal assistance, moderate assistance, maximal assistance}
+Ambulation with {walker, wheelwalker, unicane, quadricane} under {contact guard, supervision, minimal assistance, moderate assistance, maximal assistance}
+BADLs with {assistance, independence and partial assistance with} {toileting}{; bathing}
+{Increased oral feeding efficiency and remove NG tube as possible after adequate oral intake}
+{Achieve functional communication}
+{Improved dysarthria}
