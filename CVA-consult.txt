@@ -46,7 +46,7 @@ CN XII: tongue protrusion {midline, deviated}
 
 [Speech & Swallowing]
 Speech:
-- Fluency: {non}fluent
+- Fluency: {non}fluent, {sentence levels, word levels}
 - Comprehension: {failed, pass} yes/no questions 
 - Repetition: {failed, pass} 白紙真正寫黑字
 - Naming: {failed, pass} pen 
@@ -116,3 +116,4 @@ BADLs with {assistance, independence and partial assistance with} {toileting} {b
 {Increased oral feeding efficiency and remove NG tube as possible after adequate oral intake}
 {Achieve functional communication}
 {Improved dysarthria}
+
