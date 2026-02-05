@@ -1,16 +1,14 @@
 
 # Premorbid functional status: {Failed to obtain information from the ICU patient}
-`Living environment: ___
-`___市/___區
+`Living environment: 
+`___市/___區 ___樓 E{+,-}
 `往來醫院之交通工具: {搭大眾交通, 開車}
 `就醫: {獨自, 要人陪}
 `單趟來醫院時間: ___ (以小時為單位)
 `工作: {full time, part time, nil}
 `工時: {weekday 8:00 - 17:00, nil}
-___
 `有無手機{+,-} /手機能上網{+,-} /吃到飽{+,-} /用LINE的習慣{+,-} /用email的習慣{+,-}
 `Ambulation: {community, household} {with, without} {assistive device, assistance}
- ___
 `BADLs: {totally independent, partially dependent}
 `運動習慣: {sedentary & no exercise habits} ___
 
@@ -30,18 +28,17 @@ ___
 `Functional status: {bedrest , walk short distance under partial assistance , independently}
 `BADLs: {partially dependent , supervision for safety concerns , totally independent}
 ___
-
+=======================
+=======================
+Plan:
 [建議事項] for 心臟復健
 # Keep intensive care and control CV risk factor for secondary prevention
 # We will arrange rehabilitation, including 
-{PT: evaluation; cardiopulmonary training; therapeutic exercise; muscle strengthening; endurance training}
-{OT: evaluation; balance training; transfer training; ADL training; U/E or L/E function training ; Posterior type AFO (cognitive impairment; e.g. OHCA; Energy saving technique; e.g. dyspnea)}
-{ST: evaluation; swallowing training }
+{PT: evaluation; cardiopulmonary training; therapeutic exercise; muscle strengthening; endurance training}. {OT: evaluation; balance training; transfer training; ADL training; U/E or L/E function training ; Posterior type AFO (cognitive impairment; e.g. OHCA; Energy saving technique; e.g. dyspnea)}. {ST: evaluation; swallowing training }
 (若要知道後續復健進度，請查看電子病歷EMR->左上列表->總院電子表單，可見各治療師之評估與治療記錄)
 
 {# 此病人有門診心臟復健適應症，若主治醫師同意，請於出院兩周後約回復健部莊泓叡/邱翊翔/楊舒媚/陳思遠醫師之門診, 若預約門診有困難請聯絡照會醫師協助安排}
 {# 轉普通病房後, 若病人另合併有易嗆咳/鼻胃管移除困難, ADL失能等問題, 且病人"意識清楚/可配合指令/病情穩定", 可再電聯”當日照會醫師”評估ST/OT，謝謝！}
-
 {# 基於高齡/衰弱等因素，不適合安排門診心肺復健，但可考慮安排一般門診復健for deconditioning。}
 {# 經說明後病人仍表達無意願至本院門診復健(原因: }___{)}
 {# 病人原居住地距離本院遙遠，已提供心肺復健之醫院名單予病人}
@@ -64,9 +61,7 @@ ___
  c. Significant ventricular or atrial dysrhythmias with or without associated signs/symptoms
  d. Second- or third-degree heart block
  e. Signs/symptoms of exercise intolerance, including angina, marked dyspnea, and electrocardiogram (ECG) changes suggestive of ischemia
-
-{5. Keep alert to sheath wound condition and restrict movement of the corresponding limb if necessary.}
-{5. Upper extremity resistance exercise should be avoided for 5 weeks after sternotomy.}
+{5. Keep alert to sheath wound condition and restrict movement of the corresponding limb if necessary.,5. Upper extremity resistance exercise should be avoided for 5 weeks after sternotomy.}
 
 [Rehabilitation Goals]
 1. Limit the deleterious physiological and psychological effects of bed rest and CVD.
