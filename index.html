@@ -78,7 +78,7 @@
 
         files.forEach(file => {
           // Only show .txt or .md files (exclude icons/folders)
-          if (file.type === "file" && (file.name.endsWith('.txt') || file.name.endsWith('.md'))) {
+          if (file.type === "file" && file.name.endsWith('.txt')) {
             const opt = document.createElement('option');
             opt.value = file.download_url;
             opt.textContent = file.name;
