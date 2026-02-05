@@ -5,16 +5,15 @@
 {slurred speech, difficulty swallowing}
 {loss of verbal output, cannot follow verbal commands}
 ___
-
-[Family History:] ___
+{[Family History:]} ___
 
 [Premorbid]
-Living environment: ___ with ___
+Living environment: ___樓 E{+,-} with ___
 Occupation: ___
 Education: ___
-Caregiver: {院看, 巴氏} ___
-Ambulation: {community without device, community, indoor}{ with cane, with walker}
-ADLs: {independent, dependent with heavy hygiene}
+Caregiver: {院看, 巴氏, 先生, 太太, 兒子, 女兒} ___
+Ambulation: {community without device, community, indoor} {with cane, with walker}
+ADLs: {independent, dependent with heavy hygiene, totally dependent}
 
 [Physical Examination]
 Vital signs: {Stable, Unstable}
@@ -22,7 +21,7 @@ O2 demand: SPO2: >92% with {RA,NC,NRM,BiPAP}
 
 Consciousness: E{1,2,3,4}V{1,2,3,4,5}M{1,2,3,4,5,6}, {alert, drowsy, stuporous, coma}
 Cognition: {intact, poor cognition, fluctuating, not assessable due to} {drowsy state, medication effect} ___
-Tubes: {Foley catheter, nasogastric tube, central line, none} ___
+Tubes: {none, Foley catheter, nasogastric tube, central line} ___
 
 {Rancho Los Amigos (if TBI):}
 { Level I: No Response}
@@ -46,11 +45,11 @@ CN XII: tongue protrusion {midline, deviated}
 
 [Speech & Swallowing]
 Speech:
-- Fluency: {non}fluent, {sentence levels, word levels}
+- Fluency: {non}fluent, {sentence levels, phrase levels, word levels}
 - Comprehension: {failed, pass} yes/no questions 
 - Repetition: {failed, pass} 白紙真正寫黑字
 - Naming: {failed, pass} pen 
-Swallowing: 
+Swallowing: {3 cc clear water test, 100 mL water test:} {> 30 s, < 30 s}
 - Oral stasis: {+, -}, Drooling: {+, -}, Premature spillage: {+, -}
 - Time to larynx elevation: {<1s, 1–3s, >3s}
 - Larynx elevation: {full, decreased, minimal}
@@ -60,7 +59,8 @@ Swallowing:
 
 [Motor Status]
 Brunnstrom: 
- {R,L}UE(P/D): {I,II,III,IV,V}/{I,II,III,IV,V}, LE: {I,II,III,IV,V}
+ {RUE(P/D):} {I,II,III,IV,V}/{I,II,III,IV,V} {LE:} {I,II,III,IV,V}
+ {LUE(P/D):} {I,II,III,IV,V}/{I,II,III,IV,V} {LE:} {I,II,III,IV,V}
 MMT: 
  RUE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}, RLE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}
  LUE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}, LLE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}
@@ -69,45 +69,44 @@ MMT:
 Hoffman signs: R/L= {+,-}/{+,-}
 Babinski sign: R/L= {+,-}/{+,-}
 
-Sensation: (R/L) {Difficult to assess/could not clearly express the impairment level}
-Light touch: {intact, impaired, unable to assess} on {RUE} {LUE} {RLE} {LLE}
+Sensation: (R/L) {Difficult to assess, Could not clearly express the impairment level}
+{Light touch:} {intact, impaired on, unable to assess} {RUE} {LUE} {RLE} {LLE}
 {Intact: C2-}___{/C2-}___
-{Impaired:} ___
-{Absent:} ___
+{Impaired:} ___{/}___
+{Absent:} ___{/}___
 
 Deep Tendon Reflexes (DTR): Right / Left
  Biceps: {+,++,+++,++++} / {+,++,+++,++++}
  Knee: {+,++,+++,++++} / {+,++,+++,++++}
 Spasticity(MAS): {nil}
- Elbow: {0, 1, 1+, 2, 3}
- Knee: {0, 1, 1+, 2, 3}
+ {R,L} {Elbow:} {0, 1, 1+, 2, 3}
+ {R,L} {Knee:} {0, 1, 1+, 2, 3}
 
-Anal sensation: {present, impaired, absent}
-Anal tone: {tight, loose}
-Anus voluntary contraction: {present, impaired}
-Bulbocavernosus reflex: {present, impaired}
+{Anal sensation:} {present, impaired, absent}
+{Anal tone:} {tight, loose}
+{Anus voluntary contraction:} {present, impaired}
+{Bulbocavernosus reflex:} {present, impaired}
 
 [Sphincter Function]
 Defecation: {continent, incontinent} {with commode, diaper use} ___
 Urination: {continent, incontinent} {with Foley catheter, diaper use} ___
 
 [Functional Status]
-Current status: {bedrest, wheelchair, ambulatory with aid, independent ambulation}
+Current status: {bedrest, wheelchair, ambulatory with, independent ambulation} {aid, supervision, contact guard, minimal assistance, moderate assistance, maximal assistance} {with wheelwalker, walker, unicane, quadricane, handrail}
 BADLs: {independent, partially dependent, totally dependent}
 Modified Rankin Scale (mRS): {0,1,2,3,4,5}
 
----
+=========================
+=========================
 Plan:
 {1. We will arrange rehabilitation programs including}
 {Physical therapy: 物理治療評估; Facilitation techniques; Passive ROM; Ambulation training; Therapeutic Exercise; Strengthening training; Endurance training} 
-{Occupational therapy: 職能治療評估; ADL training; U/E or L/E function training; Transfer training; Balance training},{ Anterior type AFO, Posterior type AFO} 
-{Speech therapy:} {吞嚥治療評估 and 吞嚥治療} {語言治療評估;Verbal production;Augmentative communication;Oral Treatment;Oral motor training}  
-
+{Occupational therapy: 職能治療評估; ADL training; U/E or L/E function training; Transfer training; Balance training;} {Anterior type AFO, Posterior type AFO} 
+{Speech therapy:} {吞嚥治療評估 and 吞嚥治療} {語言治療評估; Verbal production; Augmentative communication; Oral Treatment; Oral motor training}  
 {Please contact us for further ST arrangement if the patient is able to follow orders more consistently at daytime > 8 hrs a day with stable medical conditions.}
-
 {2. Suggest further rehabilitation via OPD.}
 {2. The patient is indicated for further in-patient rehabilitation. Please contact us if the patient agrees and is ready for bed transfer.}
-
+___
 Goals:
 Caregiver training
 Transfer with {contact guard, supervision, minimal assistance, moderate assistance, maximal assistance}
@@ -116,4 +115,3 @@ BADLs with {assistance, independence and partial assistance with} {toileting} {b
 {Increased oral feeding efficiency and remove NG tube as possible after adequate oral intake}
 {Achieve functional communication}
 {Improved dysarthria}
-
