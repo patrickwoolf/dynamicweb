@@ -36,9 +36,10 @@ Plan:
 [建議事項] for 心臟復健
 # Keep intensive care and control CV risk factor for secondary prevention
 # We will arrange rehabilitation, including 
-{PT: evaluation; cardiopulmonary training; therapeutic exercise; muscle strengthening; endurance training}. {OT: evaluation; balance training; transfer training; ADL training; U/E or L/E function training;, Posterior type AFO (cognitive impairment; e.g. OHCA; Energy saving technique; e.g. dyspnea)}. {ST: evaluation; swallowing training }
-(若要知道後續復健進度，請查看電子病歷EMR->左上列表->總院電子表單，可見各治療師之評估與治療記錄)
-
+{PT: evaluation; cardiopulmonary training; therapeutic exercise; muscle strengthening; endurance training}. 
+{OT: evaluation; balance training; transfer training; ADL training; U/E or L/E function training;, Posterior type AFO (cognitive impairment; e.g. OHCA; Energy saving technique; e.g. dyspnea)}.
+{ST: evaluation; swallowing training }
+{(若要知道後續復健進度，請查看電子病歷EMR->左上列表->總院電子表單，可見各治療師之評估與治療記錄)}
 {# 此病人有門診心臟復健適應症，若主治醫師同意，請於出院兩周後約回復健部莊泓叡/邱翊翔/楊舒媚/陳思遠醫師之門診, 若預約門診有困難請聯絡照會醫師協助安排}
 {# 轉普通病房後, 若病人另合併有易嗆咳/鼻胃管移除困難, ADL失能等問題, 且病人"意識清楚/可配合指令/病情穩定", 可再電聯”當日照會醫師”評估ST/OT，謝謝！}
 {# 基於高齡/衰弱等因素，不適合安排門診心肺復健，但可考慮安排一般門診復健for deconditioning。}
