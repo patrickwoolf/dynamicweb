@@ -110,16 +110,17 @@ Plan:
 {Occupational therapy: posterior type AFO}
 {2.Please contact us for further evaluation for OT and/or ST; if the patient is transferred to the general ward and is able to follow some simple commands with stable medical conditions.}
 {*ST is not indicated currently due to consciousness disturbance/prominent cognitive impairment/unstable vital signs/infection episode. Please contact us for further ST arrangement if the patient is able to follow orders more consistently at daytime > 8 hrs a day with stable medical conditions.}
+{復健紅綠燈}{*In-bed PT is not indicated currently due to 紅燈:} {agitation/combative, intracranial hypertension, spinal precautions (pre-clearance/fixation), uncontrolled seizures}
+{國泰PT/OT/ST都可以開，但要標明}{*OT/ST is not indicated currently due to} {consciousness disturbance., prominent cognitive impairment., unstable vital signs., infection episode.}
 ___
 Goals:
 {Early mobilization}
 {Prevent complications}
 {Caregiver training}
 {Transfer with} {contact guard, supervision, minimal assistance, moderate assistance, maximal assistance}
-{Ambulation with} {walker, wheelwalker, unicane, quadricane} under {contact guard, supervision, minimal assistance, moderate assistance, maximal assistance}
+{Ambulation with} {walker, wheelwalker, unicane, quadricane} {under contact guard, under supervision, under minimal assistance, under moderate assistance, under maximal assistance}
 {BADLs with} {assistance, independence and partial assistance with} {toileting} {bathing}
 {Increased oral feeding efficiency and remove NG tube as possible after adequate oral intake}
 {Achieve functional communication}
 {Improved dysarthria}
-
 
