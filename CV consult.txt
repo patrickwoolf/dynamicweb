@@ -25,7 +25,7 @@
 `Muscle power: {no focal weakness ; muscle power full over four limbs , mild weakness of four limbs (MP bilateral upper 4/ bilateral lower 4), <3 over} {RUE} {RLE} {LUE} {LLE}
 `Sensation: grossly intact
 `Functional status: {bedrest , walk short distance under partial assistance , independently}
-`Cardiopulmonary capacity: {no} {angina, marked dyspnea, electrocardiogram (ECG) changes suggestive of ischemia} {at rest, while sitting, while standing, when walking}
+`Cardiopulmonary capacity: {no} {angina, marked dyspnea, electrocardiogram (ECG) changes suggestive of ischemia, severe hypertension (>=180/110 mmHg)} {at rest, while sitting, while standing, when walking}
 `BADLs: {totally dependent, partially dependent , supervision for safety concerns , independent}
 ___
 =======================
