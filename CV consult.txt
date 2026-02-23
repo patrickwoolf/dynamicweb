@@ -29,10 +29,6 @@
 `BADLs: {totally dependent, partially dependent , supervision for safety concerns , independent}
 ___
 =======================
-Impression:
-# LVEF: 
-# AACVPR risk classification: 
-=======================
 Plan:
 [建議事項] for 心臟復健
 # Keep intensive care and control CV risk factor for secondary prevention
