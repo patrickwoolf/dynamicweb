@@ -38,6 +38,7 @@ CN XI: trapezius {intact, impaired, NA}
 CN XII: tongue protrusion {midline, deviated, NA}
 
 [Speech & Swallowing]
+Dysarthria: {+,-}
 Speech:
 - Fluency: {no verbal output, nonfluent, fluent} {sentence levels, phrase levels, word levels}
 - Comprehension: {failed, pass} yes/no questions, {pass, failed} {1,2,3}-step orders
@@ -52,7 +53,7 @@ Swallowing: {unable to assess due to impaired order comprehension and there was 
 - Multiple swallows: {+, -}
 
 [Motor Status]
-Brunnstrom: 
+{Brunnstrom: }
  {RUE(P/D):} {I,II,III,IV,V}/{I,II,III,IV,V}, {RLE:} {I,II,III,IV,V}
  {LUE(P/D):} {I,II,III,IV,V}/{I,II,III,IV,V}, {LLE:} {I,II,III,IV,V}
 MMT: 
@@ -104,8 +105,10 @@ Plan:
 {[ICU rehabilitation]}
 {1.We will arrange rehabilitation programs including:}
 {Physical therapy: 物理治療評估; Facilitation; Passive ROM; Therapeutic Exercise; Strengthening training}
-{Occupational therapy: posterior type AFO}{國泰}{Occupational therapy: 職能治療評估; ADL training; U/E or L/E function training; Transfer training; Balance training;, Posterior type AFO}
-{2.Please contact us for further evaluation for OT and/or ST; if the patient is transferred to the general ward and is able to follow some simple commands with stable medical conditions.}
+{Occupational therapy: posterior type AFO}
+{國泰}
+{Occupational therapy: 職能治療評估; ADL training; U/E or L/E function training; Transfer training; Balance training;, Posterior type AFO}
+{Speech therapy:} {吞嚥治療評估 and 吞嚥治療} {語言治療評估; Verbal production; Augmentative communication; Oral Treatment; Oral motor training}  
 {*ST is not indicated currently due to consciousness disturbance/prominent cognitive impairment/unstable vital signs/infection episode. Please contact us for further ST arrangement if the patient is able to follow orders more consistently at daytime > 8 hrs a day with stable medical conditions.}
 {復健紅綠燈}{*In-bed PT is not indicated currently due to 紅燈:} {agitation/combative, intracranial hypertension, spinal precautions (pre-clearance/fixation), uncontrolled seizures}
 {國泰PT/OT/ST都可以開，但要標明}{*OT/ST is not feasible currently due to} {consciousness disturbance., prominent cognitive impairment., unstable vital signs., infection episode.} {We would initiate corresponding therapies when the patient's condition is suitable.}
@@ -120,3 +123,4 @@ Goals:
 {Increased oral feeding efficiency and remove NG tube as possible after adequate oral intake}
 {Achieve functional communication}
 {Improved dysarthria}
+
