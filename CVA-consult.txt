@@ -6,7 +6,7 @@ Living environment: ___樓 E{+,-} with ___
 Occupation: ___
 Education: ___
 Caregiver: {院看, 巴氏, 先生, 太太, 兒子, 女兒} ___
-Ambulation: {community without device, community, indoor} {with cane, with walker}
+Ambulation: {community without device, community, indoor} {with cane, with walker, with wheelchair}
 ADLs: {independent, dependent with heavy hygiene, totally dependent}
 
 [Physical Examination]
@@ -123,5 +123,6 @@ Goals:
 {Increased oral feeding efficiency and remove NG tube as possible after adequate oral intake}
 {Achieve functional communication}
 {Improved dysarthria}
+
 
 
