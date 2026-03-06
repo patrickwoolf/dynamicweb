@@ -4,7 +4,7 @@
 `就醫: {獨自, 要人陪}
 `單趟來醫院時間: ___ (以小時為單位)
 `工作: {full time, part time, nil}{weekday 8:00 - 17:00}___
-`有無手機{+,-} /手機能上網{+,-} /吃到飽{+,-} /用LINE的習慣{+,-} /用email的習慣{+,-}
+{`有無手機}{+,-} {/手機能上網}{+,-} {/吃到飽}{+,-} {/用LINE的習慣}{+,-} {/用email的習慣}{+,-}
 `Ambulation: {community, household} {with, without} {assistive device, assistance}
 `BADLs: {totally independent, partially dependent}
 `運動習慣: {sedentary & no exercise habits} ___
