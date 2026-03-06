@@ -15,7 +15,7 @@ O2 demand: SPO2: >92% with {RA,NC,NRM,BiPAP,ETT,HFNC,Tracheostomy}
 
 Consciousness: E{1,2,3,4}V{1,2,3,4,5,T,A}M{1,2,3,4,5,6}, {alert, drowsy, stuporous, coma}
 Cognition: {intact, poor cognition, fluctuating, not assessable due to} {drowsy state, medication effect} ___
-Tubes: {none, Foley catheter+, nasogastric tube+, central line+, endotracheal tube+} ___
+Tubes: {none, Foley catheter+, nasogastric tube+, central line+, endotracheal tube+, tracheostomy+} ___
 
 {Rancho Los Amigos (if TBI):}
 { Level I: No Response}
@@ -123,6 +123,7 @@ Goals:
 {Increased oral feeding efficiency and remove NG tube as possible after adequate oral intake}
 {Achieve functional communication}
 {Improved dysarthria}
+
 
 
 
