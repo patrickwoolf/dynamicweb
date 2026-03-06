@@ -1,11 +1,9 @@
 # Premorbid functional status: {Failed to obtain information due to poor cognition}
-`Living environment: 
-`___市/___區 ___樓 E{+,-}
+`Living environment: ___市/___區 ___樓 E{+,-}
 `往來醫院之交通工具: {搭大眾交通, 開車}
 `就醫: {獨自, 要人陪}
 `單趟來醫院時間: ___ (以小時為單位)
-`工作: {full time, part time, nil}
-`工時: {weekday 8:00 - 17:00, nil}
+`工作: {full time, part time, nil}{weekday 8:00 - 17:00}___
 `有無手機{+,-} /手機能上網{+,-} /吃到飽{+,-} /用LINE的習慣{+,-} /用email的習慣{+,-}
 `Ambulation: {community, household} {with, without} {assistive device, assistance}
 `BADLs: {totally independent, partially dependent}
