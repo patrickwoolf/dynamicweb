@@ -11,7 +11,7 @@ ADLs: {independent, dependent with heavy hygiene, totally dependent}
 
 [Physical Examination]
 Vital signs: {normotensive, hypertensive, hypotensive} {and bradycardia, and normal heart beat, and tachycardia}
-O2 demand: SPO2: >92% with {RA,NC,NRM,BiPAP,ETT}
+O2 demand: SPO2: >92% with {RA,NC,NRM,BiPAP,ETT,HFNC,Tracheostomy}
 
 Consciousness: E{1,2,3,4}V{1,2,3,4,5,T,A}M{1,2,3,4,5,6}, {alert, drowsy, stuporous, coma}
 Cognition: {intact, poor cognition, fluctuating, not assessable due to} {drowsy state, medication effect} ___
@@ -44,7 +44,7 @@ Speech:
 - Comprehension: {failed, pass} yes/no questions, {pass, failed} {1,2,3}-step orders
 - Repetition: {failed, pass} 白紙真正寫黑字
 - Naming: {failed, pass} pen 
-Swallowing: {unable to assess due to impaired order comprehension and there was no swallowing reflex during observation, 3 cc clear water test, 100 mL water test:} {> 30 s, < 30 s}
+Swallowing: {unable to assess due to impaired order comprehension and there was no swallowing reflex during observation, saliva swallowing with prompt swallowing reflex and fair laryngeal elevation, delayed swallowing reflex and decreased laryngeal elevation, 3 cc clear water test, 100 mL water test:} {> 30 s, < 30 s}
 - Oral stasis: {+, -}, Drooling: {+, -}, Premature spillage: {+, -}
 - Time to larynx elevation: {<1s, 1–3s, >3s}
 - Larynx elevation: {full, decreased, minimal}
@@ -123,4 +123,5 @@ Goals:
 {Increased oral feeding efficiency and remove NG tube as possible after adequate oral intake}
 {Achieve functional communication}
 {Improved dysarthria}
+
 
