@@ -135,8 +135,8 @@ CN XII: tongue protrusion {midline, deviated} {to the left, to the right}
 
 [Motor Status]
 Brunnstrom: 
- {RUE(P/D):} {I,II,III,IV,V}/{I,II,III,IV,V} {LE:} {I,II,III,IV,V}
- {LUE(P/D):} {I,II,III,IV,V}/{I,II,III,IV,V} {LE:} {I,II,III,IV,V}
+ {RUE(P/D):} {I,II,III,IV,V,VI}/{I,II,III,IV,V,VI} {LE:} {I,II,III,IV,V,VI}
+ {LUE(P/D):} {I,II,III,IV,V,VI}/{I,II,III,IV,V,VI} {LE:} {I,II,III,IV,V,VI}
 MMT: 
  RUE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}, RLE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}
  LUE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}, LLE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}
