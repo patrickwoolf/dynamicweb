@@ -15,7 +15,7 @@ Caregiver: {院看, 巴氏} ___
 Ambulation: {community without device, community, indoor}{ with cane, with walker}
 ADLs: {independent, dependent with heavy hygiene}
 
-[Treacheostomy]
+[Tracheostomy]
 Sputum suction: {<3, >=3} times/8 hours
 Cough strength: {barely audible, audible}
 
@@ -68,8 +68,8 @@ Main language: {Mandarin, Taiwanese, Hakka, English}
  Receptive index: ___/7 Picture {0,1,2,3,4}, Verbal {0,1,2,3}
 -Auditory comprehension: {good, impaired}
  Object/Body part: {correct, incorrect}
--Expression: {fluent, non-fluent}, {spontaneous, cued}
- Dysarthria: {+,-}, Slurred speech: {+,-}, Volume: {normal, decreased}
+-Expression: {fluent, non-fluent, no verbal output}, {spontaneous, cued}
+ {Dysarthria: +} {Volume: decreased}
  Sentence complexity: {words, phrases, short sentence, long sentence}
  Paraphasias: Phonemic({+,-}), Semantic({+,-}), Neologism({+,-}), Echolalia({+,-})
 -Naming: {intact, impaired}
@@ -135,7 +135,8 @@ CN XII: tongue protrusion {midline, deviated} {to the left, to the right}
 
 [Motor Status]
 Brunnstrom: 
- {R,L}UE(P/D): {I,II,III,IV,V}/{I,II,III,IV,V}, LE: {I,II,III,IV,V}
+ {RUE(P/D):} {I,II,III,IV,V}/{I,II,III,IV,V} {LE:} {I,II,III,IV,V}
+ {LUE(P/D):} {I,II,III,IV,V}/{I,II,III,IV,V} {LE:} {I,II,III,IV,V}
 MMT: 
  RUE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}, RLE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}
  LUE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}, LLE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}
@@ -149,18 +150,18 @@ DTR(R/L)
  Knee extensor: {+,++,+++,++++}/{+,++,+++,++++} 
  Ankle plantarflexor: {+,++,+++,++++}/{+,++,+++,++++}
 
-Spasticity (MAS):
-  Elbow flexor: {0,1,1+,2,3}
-  Wrist flexor: {0,1,1+,2,3}
-  Finger grasping: {0,1,1+,2,3}
-  Knee flexor: {0,1,1+,2,3}
-  Ankle plantarflexor: {0,1,1+,2,3}
+Spasticity (MAS): (R/L)
+  Elbow flexor: {0,1,1+,2,3}/{0,1,1+,2,3}
+  Wrist flexor: {0,1,1+,2,3}/{0,1,1+,2,3}
+  Finger grasping: {0,1,1+,2,3}/{0,1,1+,2,3}
+  Knee flexor: {0,1,1+,2,3}/{0,1,1+,2,3}
+  Ankle plantarflexor: {0,1,1+,2,3}/{0,1,1+,2,3}
 
-Pathologic Reflexes:
-  Babinski: R/L = {+,-}/{+,-}
-  Hoffmann: R/L = {+,-}/{+,-}
+Pathologic Reflexes: (R/L)
+  Babinski: {+,-}/{+,-}
+  Hoffmann: {+,-}/{+,-}
 
-Others: ___
+___
 
 [Sensation]
 - Pinprick/light touch: {intact, impaired} {on the, below} {right, left} ___ 
@@ -173,18 +174,18 @@ Others: ___
 - Romberg: {unable, negative, positive}
 
 [Sphincter Function]
-Defecation: {continent, partially continent, incontinent}, support: {Dulcolax, diaper}
-Urination: {continent, partially continent, incontinent}, {Foley catheter, diaper}
+Defecation: {continent, partially continent, incontinent}, {Dulcolax, commode, diaper}
+Urination: {continent, partially continent, incontinent}, {Foley catheter, urinal, diaper}
 
 [Functional Status]
 Balance:
-  Sitting (static/dynamic): {fair, poor}
-  Standing (static/dynamic): {fair, poor, NA}
+  Sitting (static/dynamic): {fair, poor}/{fair, poor}
+  Standing (static/dynamic): {fair, poor, NA}/{fair, poor, NA}
 Function:
   Rolling: {minimal, moderate, maximal} {assistance, contact guard, supervision}
   Sitting up: {minimal, moderate, maximal} {assistance, contact guard, supervision}
-  Standing up: {minimal, moderate, maximal} {assistance, contact guard, supervision}
-  Transfer: {minimal, moderate, maximal} {assistance, contact guard, supervision}
+  Standing up: {NA, minimal, moderate, maximal} {assistance, contact guard, supervision}
+  Transfer: {NA, minimal, moderate, maximal} {assistance, contact guard, supervision}
   Ambulation: {NA}{with, without device} {handrail, cane, walker} {minimal, moderate, maximal} {assistance, contact guard, supervision}
   Slope/Stairs: {NA}{with, without device} {handrail, cane} {minimal, moderate, maximal} {assistance, contact guard, supervision}
 
