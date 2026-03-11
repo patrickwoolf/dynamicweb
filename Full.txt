@@ -165,7 +165,7 @@ ___
 
 [Sensation]
 - Pinprick/light touch: {intact, impaired} {on the, below} {right, left} ___ 
-- Proprioception: {intact, impaired in all toes}
+- Proprioception: {intact, impaired in all toes, NA}
 
 [Coordination & Balance]
 - Dysmetria:
