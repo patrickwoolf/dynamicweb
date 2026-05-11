@@ -94,7 +94,7 @@ Goals:
 {Caregiver training}
 {Transfer with} {contact guard, supervision, minimal assistance, moderate assistance, maximal assistance}
 {Ambulation with} {walker, wheelwalker, unicane, quadricane} {under contact guard, under supervision, under minimal assistance, under moderate assistance, under maximal assistance}
-{BADLs with} {assistance, independence and partial assistance with} {toileting} {bathing}
-{Increased oral feeding efficiency and remove NG tube as possible after adequate oral intake}
+{BADLs with} {assistance, independence and partial assistance with, independence} {toileting} {bathing}
+{Increased oral feeding efficiency and remove NG tube as possible after adequate oral intake, Partial oral feeding and keep NG tube}
 {Achieve functional communication}
 {Improved dysarthria}
