@@ -1,7 +1,7 @@
 {[Present illness]}
 {loss of consciousness, impaired cognition, myoclonus, hypertone, muscle twitching, bladder incontinence, bowel incontinence, slurred speech, difficulty swallowing, loss of verbal output, cannot follow verbal commands} ___
 {[Family History:]} ___
-[Premorbid] {not acquired due to impaired consciousness/cognition}
+[Premorbid] {unable to acquire}
 Living environment: ___樓 E{+,-} with ___
 Occupation: ___
 Education: ___
