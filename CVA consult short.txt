@@ -1,0 +1,100 @@
+{[Present illness]}
+{loss of consciousness, impaired cognition, myoclonus, hypertone, muscle twitching, bladder incontinence, bowel incontinence, slurred speech, difficulty swallowing, loss of verbal output, cannot follow verbal commands} ___
+{[Family History:]} ___
+[Premorbid] {not acquired due to impaired consciousness/cognition}
+Living environment: ___樓 E{+,-} with ___
+Occupation: ___
+Education: ___
+Caregiver: {院看, 巴氏, 先生, 太太, 兒子, 女兒} ___
+Ambulation: {community without device, community, indoor} {with cane, with walker, with wheelchair}
+ADLs: {independent, dependent with heavy hygiene, totally dependent}
+
+[Physical Examination]
+Vital signs: {normotensive, hypertensive, hypotensive} {and bradycardia, and normal heart beat, and tachycardia}
+O2 demand: SPO2: >92% with {RA,NC,NRM,BiPAP,ETT,HFNC,Tracheostomy}
+Consciousness: E{1,2,3,4}V{1,2,3,4,5,T,A}M{1,2,3,4,5,6}, {alert, drowsy, stuporous, coma}
+Cognition: {intact, poor cognition, fluctuating, not assessable due to} {drowsy state, medication effect} ___
+Tubes: {none, Foley catheter+, nasogastric tube+, central line+, endotracheal tube+, tracheostomy+} ___
+
+{Rancho Los Amigos (if TBI):}{ Level I: No Response}{ Level II: Generalized Response}{ Level III: Localized Response}{ Level IV: Confused-agitated}{ Level V: Confused-inappropriate; non-Agitated; maximal assistance (f/u Simple order + 自我照顧 under assistance)}{ Level VI: Confused-appropriate; moderate assistance (Social interaction 但 impaired judgement)}{ Level VII: Automatic-appropriate; minimal assistance in ADL (goal-directed)}{ Level VIII: Purposeful-appropriate; standby assistance}
+
+[Cranial Nerves] {unable to follow order}
+CN II: pupil size: R/L {3,4,5}/{3,4,5}, light reflex: {+,-}/{+,-}, 
+       visual field {intact, impaired} {by threatening test}
+CN VII: facial palsy {+,-}
+CN XII: tongue protrusion {midline, deviated, NA}
+
+[Speech & Swallowing]
+Dysarthria: {+,-}
+Speech:
+- Fluency: {no verbal output, nonfluent, fluent} {sentence levels, phrase levels, word levels}
+- Comprehension: {pass, failed} {1,2,3}-step orders
+Swallowing: {unable to assess due to impaired order comprehension and there was no swallowing reflex during observation, saliva swallowing with prompt swallowing reflex and fair laryngeal elevation, delayed swallowing reflex and decreased laryngeal elevation, 3 cc clear water test, 100 mL water test:} {> 30 s, < 30 s}
+- FOIS: {1,2,3,4,5,6,7} {第 1 級： 完全不能經口進食（需依賴鼻胃管或胃造口等管餵）。第 2 級： 依賴管餵，但可嘗試極少量的食物或液體。第 3 級： 依賴管餵，但可經口進食單一質地的食物或液體。第 4 級： 完全經口進食（不需管餵），但僅限單一質地的飲食。第 5 級： 完全經口進食，可攝取多種質地的飲食，但需要經過特殊製備（如剪碎、攪打）。第 6 級： 完全經口進食，可攝取多種質地的飲食，不需特殊製備，但仍有特定的食物限制。第 7 級： 完全經口進食且無任何限制。}
+- Drooling: {+, -}
+- Time to larynx elevation: {<1s, 1–3s, >3s}
+- Larynx elevation: {full, decreased, minimal}
+- Choking: {+, -} {pre,during,post}
+- Wet voice: {+, -}
+- Multiple swallows: {+, -}
+
+[Motor Status]
+{Brunnstrom: }
+ {RUE(P/D):} {I,II,III,IV,V}/{I,II,III,IV,V}, {RLE:} {I,II,III,IV,V}
+ {LUE(P/D):} {I,II,III,IV,V}/{I,II,III,IV,V}, {LLE:} {I,II,III,IV,V}
+MMT: 
+ RUE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}, RLE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}
+ LUE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}, LLE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}
+{Motor level:} {C5,C6,C7,C8,T1,L2,L3,L4,L5,S1}
+Hoffman signs: R/L= {+,-}/{+,-}
+Babinski sign: R/L= {+,-}/{+,-}
+
+Sensation: (R/L) {difficult to assess, could not clearly express the impairment level}
+{Light touch:} {intact, impaired on} {RUE} {LUE} {RLE} {LLE}
+{Impaired:} ___{/}___
+
+Deep Tendon Reflexes (DTR): Right / Left
+ Biceps: {+,++,+++,++++} / {+,++,+++,++++}
+ Knee: {+,++,+++,++++} / {+,++,+++,++++}
+
+[Sphincter Function]
+Urination: {continent, incontinent} {with Foley catheter, diaper use} ___
+{Anal sensation:} {present, impaired, absent}
+{Anal tone:} {tight, loose}
+{Anus voluntary contraction:} {present, impaired}
+{Bulbocavernosus reflex:} {present, impaired}
+
+[Functional Status]
+Current status: {bedrest, wheelchair, ambulatory with, independent ambulation} {aid, supervision, contact guard, minimal assistance, moderate assistance, maximal assistance} {with wheelwalker, walker, unicane, quadricane, handrail}
+Modified Rankin Scale (mRS): {0,1,2,3,4,5}
+
+=========================
+Plan:
+{[Ward rehabilitation]}
+{1. We will arrange rehabilitation programs including}
+{Physical therapy: 物理治療評估; Facilitation techniques; Passive ROM; Ambulation training; Therapeutic Exercise; Strengthening training; Endurance training} 
+{Occupational therapy: 職能治療評估; ADL training; U/E or L/E function training; Transfer training; Balance training;} {Anterior type AFO, Posterior type AFO} 
+{Speech therapy:} {吞嚥治療評估 and 吞嚥治療} {語言治療評估; Verbal production; Augmentative communication; Oral Treatment; Oral motor training}  
+{Psychotherapy:} {心理治療評估 and 心理治療}
+{Please contact us for further ST arrangement if the patient is able to follow orders more consistently at daytime > 8 hrs a day with stable medical conditions.}
+{*,**}{2. Suggest further rehabilitation via OPD.}{2. The patient is indicated for further in-patient rehabilitation. Please contact us if the patient agrees and is ready for bed transfer.}
+{[ICU rehabilitation]}
+{1.We will arrange rehabilitation programs including:}
+{Physical therapy: 物理治療評估; Facilitation; Passive ROM; Therapeutic Exercise; Strengthening training}
+{Occupational therapy: 職能治療評估; ADL training; U/E or L/E function training; Transfer training; Balance training;, Posterior type AFO}
+{Speech therapy:} {吞嚥治療評估 and 吞嚥治療} {語言治療評估; Verbal production; Augmentative communication; Oral Treatment; Oral motor training}  
+{Psychotherapy:} {心理治療評估 and 心理治療}
+{復健紅綠燈}{*In-bed PT is not indicated currently due to 紅燈:} {agitation/combative, intracranial hypertension, spinal precautions (pre-clearance/fixation), uncontrolled seizures}
+{[Pain]}
+{1.Please consider arrange 四肢超音波 (R2058000, 請備註檢查部位及診斷) and contact R吳一宏 GSM:61947 for examination arrangement.}
+___
+Goals:
+{Early mobilization}
+{Prevent complications}
+{Caregiver training}
+{Transfer with} {contact guard, supervision, minimal assistance, moderate assistance, maximal assistance}
+{Ambulation with} {walker, wheelwalker, unicane, quadricane} {under contact guard, under supervision, under minimal assistance, under moderate assistance, under maximal assistance}
+{BADLs with} {assistance, independence and partial assistance with} {toileting} {bathing}
+{Increased oral feeding efficiency and remove NG tube as possible after adequate oral intake}
+{Achieve functional communication}
+{Improved dysarthria}
