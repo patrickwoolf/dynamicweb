@@ -87,7 +87,7 @@ Plan:
 - {復健紅綠燈}{*In-bed PT is not indicated currently due to 紅燈:} {agitation/combative, intracranial hypertension, spinal precautions (pre-clearance/fixation), uncontrolled seizures}
 
 {[Pain]}
-- {Please consider arrange 四肢超音波 (R2058000, 請備註檢查部位及診斷) and contact R吳一宏 GSM:61947 for examination arrangement.}
+- {Please consider arrange 四肢超音波 (R2058000; 請備註檢查部位及診斷) and contact R吳一宏 GSM:61947 for examination arrangement.}
 ___
 
 Goals:
