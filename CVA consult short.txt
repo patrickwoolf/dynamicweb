@@ -65,7 +65,7 @@ Deep Tendon Reflexes (DTR): Right / Left
 - {Bulbocavernosus reflex:} {present, impaired}
 
 [Functional Status]
-- Current status: {bedrest, wheelchair, ambulatory with, independent ambulation} {aid, supervision, contact guard, minimal assistance, moderate assistance, maximal assistance} {with wheelwalker, walker, unicane, quadricane, handrail}
+{- Current status: }{bedrest, wheelchair, ambulatory with, independent ambulation} {aid, supervision, contact guard, minimal assistance, moderate assistance, maximal assistance} {with wheelwalker, walker, unicane, quadricane, handrail}
 - Modified Rankin Scale (mRS): {0,1,2,3,4,5}{0 分：完全無症狀。1 分：有症狀但無明顯功能障礙。能執行所有中風前的日常工作與活動。2 分：輕度失能。無法執行所有中風前的活動，但在不需要他人協助的情況下，仍能處理自己的事務。3 分：中度失能。需要一些協助，但可以在不需要他人扶持的情況下行走。4 分：中重度失能。無法在沒有協助的情況下行走，且無法處理個人如廁或生活起居。5 分：重度失能。長期臥床、失禁，需要 24 小時專人護理與照顧。}
 ___
 =========================
