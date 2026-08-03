@@ -1,5 +1,5 @@
 # Premorbid functional status: {Failed to obtain information due to poor cognition}
-`Living environment: ___市/___區 ___樓 E{+,-}
+`Living environment: ___樓 E{+,-}
 `往來醫院之交通工具: {搭大眾交通, 開車}
 `就醫: {獨自, 要人陪}
 {`單趟來醫院時間:} ___ {(以小時為單位)}
