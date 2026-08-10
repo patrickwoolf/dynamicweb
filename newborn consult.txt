@@ -23,11 +23,11 @@
 - Focal Weakness/Asymmetry: {None, Right upper extremity weakness, Left upper extremity weakness, Right lower extremity weakness, Left Lower extremity weakness}
 
 4. Primitive Reflexes
-- Moro Reflex: {Strong and symmetric, Weak and symmetric, Asymmetric (Right depressed), Asymmetric (Left depressed), Absent}
-- Palmar Grasp: {Strong and symmetric, Weak bilaterally, Asymmetric, Absent}
-- Plantar Grasp: {Strong and symmetric, Weak bilaterally, Asymmetric, Absent}
-- Asymmetric Tonic Neck Reflex (ATNR): {Slight/Normal, Obligatory/Abnormal, Absent}
-- Rooting Reflex: {Strong, Weak, Absent}
+- Moro Reflex (3-6 months): {Strong and symmetric, Weak and symmetric, Asymmetric (Right depressed), Asymmetric (Left depressed), Absent}
+- Palmar Grasp (3-4 months): {Strong and symmetric, Weak bilaterally, Asymmetric, Absent}
+- Plantar Grasp (9-12 months): {Strong and symmetric, Weak bilaterally, Asymmetric, Absent}
+- Asymmetric Tonic Neck Reflex (ATNR) (4-6 months): {Slight/Normal, Obligatory/Abnormal, Absent}
+- Rooting Reflex (3-4 months): {Strong, Weak, Absent}
 
 5. Integumentary & Musculoskeletal
 - Congenital Hemangioma: Center shows {telangiectasia, ulceration, active bleeding, no skin breakdown}.
