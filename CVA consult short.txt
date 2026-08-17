@@ -72,14 +72,14 @@ ___
 Plan:
 {[Ward rehabilitation]}
 {1. We will arrange rehabilitation programs including}
-  - {Physical therapy: 物理治療評估;, Facilitation;, Passive ROM;, Ambulation training;, Chest Percussion; Postural Drainage;, Therapeutic Exercise; Strengthening training; Endurance training} 
+  - {Physical therapy: 物理治療評估;, Passive ROM;, Chest Percussion; Postural Drainage;, Facilitation;, Therapeutic Exercise; Strengthening training; Balance training; Endurance training;, Ambulation training;} 
   - {Occupational therapy: 職能治療評估; ADL training; U/E or L/E function training; Transfer training; Balance training;} {Anterior type AFO, Posterior type AFO} 
   - {Speech therapy:} {吞嚥治療評估 and 吞嚥治療} {語言治療評估; Verbal production; Augmentative communication; Oral Treatment; Oral motor training}  
   - {Psychotherapy:} {心理治療評估 and 心理治療}
 - {*,**}
 {[ICU rehabilitation]}
 {1.We will arrange rehabilitation programs including:}
-  - {Physical therapy: 物理治療評估;, Facilitation;, Passive ROM;, Chest Percussion; Postural Drainage;, Therapeutic Exercise; Strengthening training}
+  - {Physical therapy: 物理治療評估;, Passive ROM;, Chest Percussion; Postural Drainage;, Facilitation;, Balance training; Therapeutic Exercise; Strengthening training}
   - {Occupational therapy: 職能治療評估; ADL training; U/E or L/E function training; Transfer training; Balance training;, Posterior type AFO}
   - {Speech therapy:} {吞嚥治療評估 and 吞嚥治療} {語言治療評估; Verbal production; Augmentative communication; Oral Treatment; Oral motor training}  
   - {Psychotherapy:} {心理治療評估 and 心理治療}
