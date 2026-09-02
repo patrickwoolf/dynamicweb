@@ -8,6 +8,7 @@
 - Caregiver: {院看, 巴氏, 先生, 太太, 兒子, 女兒} ___
 - Ambulation: {community without device, community, indoor} {with cane, with walker, with wheelchair}
 - ADLs: {independent, dependent with heavy hygiene, totally dependent}
+- ___
 
 [Physical Examination]
 - Vital signs: {normotensive, hypertensive, hypotensive} {and bradycardia, and normal heart beat, and tachycardia}
@@ -16,7 +17,7 @@
 - Cognition: {intact, poor cognition, fluctuating, not assessable due to} {drowsy state, medication effect} ___
 - Tubes: {none, Foley catheter+, nasogastric tube+, central line+, endotracheal tube+, tracheostomy+} ___
 
-{Rancho Los Amigos (if TBI):}{ Level I: No Response}{ Level II: Generalized Response}{ Level III: Localized Response}{ Level IV: Confused-agitated}{ Level V: Confused-inappropriate; non-Agitated; maximal assistance (f/u Simple order + 自我照顧 under assistance)}{ Level VI: Confused-appropriate; moderate assistance (Social interaction 但 impaired judgement)}{ Level VII: Automatic-appropriate; minimal assistance in ADL (goal-directed)}{ Level VIII: Purposeful-appropriate; standby assistance}
+{- Rancho Los Amigos (TBI):}{ Level I: No Response}{ Level II: Generalized Response}{ Level III: Localized Response}{ Level IV: Confused-agitated}{ Level V: Confused-inappropriate; non-Agitated; maximal assistance (f/u Simple order + 自我照顧 under assistance)}{ Level VI: Confused-appropriate; moderate assistance (Social interaction 但 impaired judgement)}{ Level VII: Automatic-appropriate; minimal assistance in ADL (goal-directed)}{ Level VIII: Purposeful-appropriate; standby assistance}
 
 [Cranial Nerves] {unable to follow order}
 - CN II: pupil size: R/L {3,4,5}/{3,4,5}, light reflex: {+,-}/{+,-}
@@ -29,8 +30,9 @@
 - Speech:
   - Fluency: {no verbal output, nonfluent, fluent} {sentence levels, phrase levels, word levels}
   - Comprehension: {pass, failed} {1,2,3}-step orders
+  - ___
 - Swallowing: {unable to assess due to impaired order comprehension and there was no swallowing reflex during observation, saliva swallowing with prompt swallowing reflex and fair laryngeal elevation, delayed swallowing reflex and decreased laryngeal elevation, 3 cc clear water test, 100 mL water test:} {> 30 s, < 30 s}
-  - FOIS: {1,2,3,4,5,6,7} {第 1 級： 完全不能經口進食（需依賴鼻胃管或胃造口等管餵）。第 2 級： 依賴管餵，但可嘗試極少量的食物或液體。第 3 級： 依賴管餵，但可經口進食單一質地的食物或液體。第 4 級： 完全經口進食（不需管餵），但僅限單一質地的飲食。第 5 級： 完全經口進食，可攝取多種質地的飲食，但需要經過特殊製備（如剪碎、攪打）。第 6 級： 完全經口進食，可攝取多種質地的飲食，不需特殊製備，但仍有特定的食物限制。第 7 級： 完全經口進食且無任何限制。}
+  - FOIS: {1,2,3,4,5,6,7} {第 1 級： 完全不能經口進食（需依賴鼻胃管或胃造口等管餵）。第 2 級： 依賴管餵，但可嘗試極少量的食物或液體。第 3 級： 依賴管餵，但可經口進食單一質地的食物或液體。第 4 級： 完全經口進食（不需管餵），但僅限單一質地的飲食。第 5 級： 完全經口進食，可攝取多種質地的飲食，但需要經過特殊製備（如剪碎、攪打）。第 6 級： 完全經口進食，可攝取多種質地的飲食，不需特殊製備，但仍有特定的食物限制。第 7 級： 完全經口進食且無任何限制。} ___
   - Drooling: {+, -}
   - Time to larynx elevation: {<1s, 1–3s, >3s}
   - Larynx elevation: {full, decreased, minimal}
@@ -39,15 +41,21 @@
   - Multiple swallows: {+, -}
 
 [Motor Status]
-- {Brunnstrom stage: }
+- {Right,Left} {hemiparesis,hemiplegia} {Brunnstrom stage: }
   - {RUE(P/D):} {I,II,III,IV,V}/{I,II,III,IV,V}  {RLE:} {I,II,III,IV,V}
   - {LUE(P/D):} {I,II,III,IV,V}/{I,II,III,IV,V}  {LLE:} {I,II,III,IV,V}
 - Muscle Strength: 
   - RUE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5} RLE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}
   - LUE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5} LLE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}
+  - {Right arm motor drift:} {falls within 10 seconds, drifts but not hit bed, drifts and hit bed, some effort against gravity, no effort against gravity, no movement}
+    {Left arm motor drift:} {falls within 10 seconds, drifts but not hit bed, drifts and hit bed, some effort against gravity, no effort against gravity, no movement}
+  - {Right leg motor drift:} {falls within 10 seconds, drifts but not hit bed, drifts and hit bed, some effort against gravity, no effort against gravity, no movement}
+  - {Left leg motor drift:} {falls within 10 seconds, drifts but not hit bed, drifts and hit bed, some effort against gravity, no effort against gravity, no movement}
+- ___
 - {Motor level:} {C5,C6,C7,C8,T1,L2,L3,L4,L5,S1}
 - Hoffman signs: R/L= {+,-}/{+,-}
 - Babinski sign: R/L= {+,-}/{+,-}
+
 
 Sensation: {difficult to assess, could not clearly express the impairment level}
 - {Light touch:} {intact, impaired on} {RUE} {LUE} {RLE} {LLE}
@@ -67,7 +75,7 @@ Deep Tendon Reflexes (DTR): Right / Left
 [Functional Status]
 {- Current status: }{bedrest, wheelchair, ambulatory with, independent ambulation} {aid, supervision, contact guard, minimal assistance, moderate assistance, maximal assistance} {with wheelwalker, walker, unicane, quadricane, handrail}
 - Modified Rankin Scale (mRS): {0,1,2,3,4,5}{0 分：完全無症狀。1 分：有症狀但無明顯功能障礙。能執行所有中風前的日常工作與活動。2 分：輕度失能。無法執行所有中風前的活動，但在不需要他人協助的情況下，仍能處理自己的事務。3 分：中度失能。需要一些協助，但可以在不需要他人扶持的情況下行走。4 分：中重度失能。無法在沒有協助的情況下行走，且無法處理個人如廁或生活起居。5 分：重度失能。長期臥床、失禁，需要 24 小時專人護理與照顧。}
-___
+- ___
 =========================
 Plan:
 {[Ward rehabilitation]}
