@@ -1,0 +1,66 @@
+# Premorbid functional status: {Failed to obtain information due to poor cognition}
+`Living environment: ___樓 E{+,-}
+`往來醫院之交通工具: {搭大眾交通, 開車}
+`就醫: {獨自, 要人陪}
+{`單趟來醫院時間:} ___ {(以小時為單位)}
+`工作: {full time, part time, nil}{weekday 8:00 - 17:00}___
+{`有無手機}{+,-} {/手機能上網}{+,-} {/吃到飽}{+,-} {/用LINE的習慣}{+,-} {/用email的習慣}{+,-}
+`Ambulation: {community, household} {with, without} {assistive device, assistance}
+`BADLs: {totally independent, partially dependent}
+`運動習慣: {sedentary & no exercise habits} ___
+
+#Physical examination
+`Vital signs: {afebrile, febrile}, {normal heart rate, bradycardia, tachycardia}.
+`Oxygen demand: {O2 nasal cannula, ambient air}
+`Consciousness: {clear and oriented, disoriented}, {cooperative, passive}
+`Breathing pattern: fair 
+`Breathing sound: {clear, coarse}
+`Lung expansion: {fair, limited}
+`Cough ability: {functional, impaired} 
+`Wound: fair 
+`Tube: {nil, NG+, Foley+, sheath+, temporary pacemaker+, chest tube+, CVC+, Permcath+, Double lumen+, A-line+}  ___
+`Heart: {systolic, diastolic, no} murmurs {at} {aortic area, pulmonic area, left sternal border, tricuspid area, mitral area}
+`Muscle power: {no focal weakness ; muscle power full over four limbs , mild weakness of four limbs (MP bilateral upper 4/ bilateral lower 4), <3 over} {RUE} {RLE} {LUE} {LLE}
+`Sensation: grossly intact
+`Functional status: {bedrest , walk short distance under partial assistance , independently}
+`Cardiopulmonary capacity: {no} {angina;, marked dyspnea;, electrocardiogram (ECG) changes suggestive of ischemia;, severe hypertension (>=180/110 mmHg)} {at rest, while sitting, while standing, when walking}
+`BADLs: {totally dependent, partially dependent , supervision for safety concerns , independent}
+___
+=======================
+Plan:
+[建議事項] for 心臟復健
+# Keep intensive care and control CV risk factor for secondary prevention
+# We will arrange rehabilitation, including 
+{PT: evaluation; cardiopulmonary training; therapeutic exercise; muscle strengthening; endurance training}. 
+{OT: evaluation; balance training; transfer training; ADL training; U/E or L/E function training;, Posterior type AFO (cognitive impairment; e.g. OHCA; Energy saving technique; e.g. dyspnea)}.
+{ST: evaluation; swallowing training }
+{(若要知道後續復健進度，請查看電子病歷EMR->左上列表->總院電子表單，可見各治療師之評估與治療記錄)}
+{# 此病人有門診心臟復健適應症，若主治醫師同意，請於出院兩周後約回復健部莊泓叡/邱翊翔/楊舒媚/陳思遠醫師之門診, 若預約門診有困難請聯絡照會醫師協助安排}
+{# 轉普通病房後, 若病人另合併有易嗆咳/鼻胃管移除困難, ADL失能等問題, 且病人"意識清楚/可配合指令/病情穩定", 可再電聯”當日照會醫師”評估ST/OT，謝謝！}
+{# 基於高齡/衰弱等因素，不適合安排門診心肺復健，但可考慮安排一般門診復健for deconditioning。}
+{# 經說明後病人仍表達無意願至本院門診復健(原因: }___{)}
+{# 病人原居住地距離本院遙遠，已提供心肺復健之醫院名單予病人}
+{# Initiate SDM (如果符合; 針對STEMI PCI後病人) }
+
+[Rehabilitation Prescription] 
+1. Type of exercise:
+ a. ICU stay: Routine ICU activities, sitting warm-ups, bedside commode as tolerated.
+ b. General ward stay: Out of bed as tolerated, sitting warm-ups, standing warm-ups, walking in-room, walking 5-10 min in hall, walking up one flight of stairs, etc
+2. Exercise intensity: 
+ a. To tolerance if asymptomatic
+ b. RPE ≦ 13 on a scale of 6–20
+ c. HRrest + 20 bpm and HR ≦ 120 bpm as the arbitrary upper limit
+3. Exercise duration:
+ a. Begin with intermittent bouts lasting 3 to 5 minutes as tolerated
+ b. Rest period may be a slower walk (or complete rest, at the patient’s discretion) that is shorter than the duration of the exercise bout. Attempt to achieve a 2:1 exercise/rest ratio
+4. Stop exercise training if occurrence of the following adverse responses:
+ a. Diastolic blood pressure (DBP)≧110 mm Hg
+ b. Decrease in systolic blood pressure (SBP)≧10 mm Hg during exercise
+ c. Significant ventricular or atrial dysrhythmias with or without associated signs/symptoms
+ d. Second- or third-degree heart block
+ e. Signs/symptoms of exercise intolerance, including angina, marked dyspnea, and electrocardiogram (ECG) changes suggestive of ischemia
+{5. Keep alert to sheath wound condition and restrict movement of the corresponding limb if necessary.,5. Upper extremity resistance exercise should be avoided for 5 weeks after sternotomy.}
+
+[Rehabilitation Goals]
+1. Limit the deleterious physiological and psychological effects of bed rest and CVD.
+2. Enable the patient to safely return to activities of daily living within limits imposed by CVD.

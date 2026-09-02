@@ -5,19 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dynamic Website Generator</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; text-align: center; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
     h1 { color: #333; }
-    .form-group { position: relative; width: 80%; margin-bottom: 20px; background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); display: inline-block; }
-    .form-group textarea { width: calc(100% - 30px); padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; resize: none; overflow-y: hidden; }
+    .form-group {
+      position: relative;
+      width: 80%;
+      margin-bottom: 20px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+    .form-group textarea {
+      width: calc(100% - 30px);
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: none;
+      overflow-y: hidden;
+    }
     label { display: block; font-weight: bold; margin-bottom: 8px; }
-    button { background: #4caf50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: 5px; }
-    .selectable-box { display: inline-block; padding: 8px; margin: 5px; border: 1px solid #ccc; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
+    textarea {
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    .selectable-box {
+      display: inline-block;
+      padding: 8px;
+      margin: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
     .selectable-box:hover { background: #e0f7fa; }
     .selectable-box.selected { background: #c8e6c9; }
-    .delete-button { position: absolute; top: 5px; right: 5px; width: 15px; background: transparent; border: none; color: black; cursor: pointer; }
-    #resultContainer { margin-top: 20px; text-align: left; font-family: Consolas, monospace; font-size: 12px; }
-    p { background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
-    .inline-textarea { display: inline-block; font-family: inherit; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; padding: 4px; width: 90px; height: 24px; resize: none; vertical-align: middle; overflow: hidden; }
+    .delete-button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 15px;
+      background: transparent;
+      border: none;
+      color: black;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    #resultContainer {
+      margin-top: 20px;
+      text-align: left;
+      font-family: Consolas, monospace;
+      font-size: 12px;
+    }
+    p {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .inline-textarea {
+      display: inline-block;
+      font-family: inherit;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 4px;
+      width: 90px;
+      height: 24px;
+      resize: none;
+      vertical-align: middle;
+      overflow: hidden;
+    }
     #floatingBox {
       position: fixed;
       top: 10px;
@@ -40,34 +117,24 @@
       height: auto;
       margin-left: 8px;
     }
-    /* Template Select Styling */
-    .template-selector {
-      margin-left: 15px;
-      padding: 5px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      vertical-align: middle;
-    }
   </style>
 </head>
 <body>
   <h1>Dynamic Website Generator</h1>
+
   <div id="floatingBox">
-    <span>→ GitHub Repo here →</span>
+    <span>→ copy templates here →</span>
     <a href="https://github.com/patrickwoolf/dynamicweb" target="_blank">
       <img src="icon.png" alt="Homepage">
     </a>
   </div>
+
   <i>Patrick Yi-Hong Wu</i>
   <p>
     PE: {intact, impaired} <br>↓<br>
     PE:
-    <span class="selectable-box">intact</span>
-    <span class="selectable-box">impaired</span>
-  <br><br>
-    <select id="repoTemplateSelect" class="template-selector">
-      <option value="">-- Load Template --</option>
-    </select>
+    <span class="selectable-box" onclick="toggleSelected(this)">intact</span>
+    <span class="selectable-box" onclick="toggleSelected(this)">impaired</span>
   </p>
 
   <form id="dynamicForm">
@@ -80,54 +147,30 @@
     <button type="button" id="decreaseFontBtn">−</button>
     <button type="button" id="increaseFontBtn">+</button>
   </div>
-  
+
   <div id="resultContainer"></div>
   <button type="button" onclick="copyResult()">Copy Result</button>
 
   <script>
-    const GITHUB_API_URL = "https://api.github.com/repos/patrickwoolf/dynamicweb/contents/";
-
     document.addEventListener("DOMContentLoaded", () => {
       addFormGroup();
       loadSavedValues();
-      fetchRepoFiles(); // Fetch files for the dropdown
+      loadDefaultContent();
     });
 
-    // 1. Fetch file list from GitHub
-    async function fetchRepoFiles() {
-      const select = document.getElementById('repoTemplateSelect');
-      try {
-        const response = await fetch(GITHUB_API_URL);
-        if (!response.ok) throw new Error("Failed to fetch repo content");
-        const files = await response.json();
-
-        files.forEach(file => {
-          // Only show .txt or .md files (exclude icons/folders)
-          if (file.type === "file" && file.name.endsWith('.txt')) {
-            const opt = document.createElement('option');
-            opt.value = file.download_url;
-            opt.textContent = file.name;
-            select.appendChild(opt);
-          }
-        });
-
-        // Add event listener for selection
-        select.addEventListener('change', (e) => {
-          if (e.target.value) {
-            loadTemplateFromUrl(e.target.value);
-          }
-        });
-      } catch (err) {
-        console.error("Error loading GitHub files:", err);
+    async function loadDefaultContent() {
+      const textarea0 = localStorage.getItem('textarea0');
+      if (textarea0 && textarea0.trim() !== "") {
+        //alert("✔️ textarea0 already has content — skipping default.");
+        return;
       }
-    }
 
-    // 2. Load the specific file content into the first textarea
-    async function loadTemplateFromUrl(url) {
       try {
-        const res = await fetch(url);
-        if (!res.ok) throw new Error("Could not download file");
+        const res = await fetch('CVA-consult.txt');
+        //alert(`📥 Fetch status: ${res.status}`);
+        if (!res.ok) throw new Error(res.statusText);
         const txt = await res.text();
+        //alert(`✅ Loaded template (${txt.length} characters).`);
 
         let fg = document.getElementById('dynamicContent').firstElementChild;
         if (!fg) { addFormGroup(); fg = document.getElementById('dynamicContent').firstElementChild; }
@@ -137,18 +180,19 @@
         autoResize(ta);
         saveValueToLocalStorage(ta);
       } catch (err) {
-        alert("Error loading template: " + err.message);
+        //alert("❌ Error loading default: " + err.message);
+        console.error(err);
       }
     }
-
-    // --- REMAINDER OF YOUR ORIGINAL LOGIC ---
 
     function addFormGroup() {
       const dc = document.getElementById('dynamicContent');
       const fg = document.createElement('div');
       fg.className = 'form-group';
+
       const label = document.createElement('label');
       label.textContent = 'Enter your content:';
+
       const ta = document.createElement('textarea');
       ta.placeholder = 'Type here...';
       ta.id = 'textarea' + dc.childElementCount;
@@ -156,6 +200,7 @@
         autoResize(this);
         saveValueToLocalStorage(this);
       });
+
       const del = document.createElement('button');
       del.type = 'button';
       del.className = 'delete-button';
@@ -164,6 +209,7 @@
         dc.removeChild(fg);
         localStorage.removeItem(ta.id);
       };
+
       fg.append(label, ta, del);
       dc.appendChild(fg);
     }
@@ -171,6 +217,9 @@
     function autoResize(ta) {
       ta.style.height = 'auto';
       ta.style.height = ta.scrollHeight + 'px';
+      if (ta.classList.contains('inline-textarea')) {
+        ta.style.width = (ta.scrollWidth + 5) + 'px';
+      }
     }
 
     function saveValueToLocalStorage(ta) {
@@ -187,6 +236,10 @@
           autoResize(ta);
         }
       });
+    }
+
+    function toggleSelected(el) {
+      el.classList.toggle('selected');
     }
 
     function generateResult() {
@@ -225,7 +278,7 @@
         if (part) frag.appendChild(document.createTextNode(part));
         if (idx < arr.length - 1) {
           const ta = document.createElement('textarea');
-          ta.placeholder = '...';
+          ta.placeholder = 'Type here...';
           ta.className = 'inline-textarea';
           ta.addEventListener('input', () => autoResize(ta));
           frag.appendChild(ta);
@@ -248,14 +301,20 @@
         text += '\n';
       });
       if (text.trim()) {
-        navigator.clipboard.writeText(text).then(() => alert('Copied!'));
-      }
+        navigator.clipboard.writeText(text).then(() => alert('Copied:\n' + text));
+      } else alert('No result to copy!');
     }
 
+    // Font controls
     const outEl = document.getElementById('resultContainer');
-    let fs = 14;
-    document.getElementById('increaseFontBtn').onclick = () => { fs++; outEl.style.fontSize = fs + 'px'; };
-    document.getElementById('decreaseFontBtn').onclick = () => { fs--; outEl.style.fontSize = fs + 'px'; };
+    let fs = 10;
+    document.getElementById('increaseFontBtn').onclick = () => updateFont(fs + 1);
+    document.getElementById('decreaseFontBtn').onclick = () => updateFont(fs - 1);
+    function updateFont(s) {
+      fs = Math.max(6, Math.min(30, s));
+      outEl.style.fontSize = fs + 'px';
+    }
+    updateFont(fs);
   </script>
 </body>
 </html>

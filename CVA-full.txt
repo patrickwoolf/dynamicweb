@@ -26,7 +26,7 @@ PHQ-2:
 3. Attention (serial 3s): {0,1,2}
 4. Acute change: {0,4}
 
-[MMSE] /30 (education level: {})
+[MMSE] /30 (education level: ___)
 Time(5)/Place(5): {0,1,2,3,4,5}/{0,1,2,3,4,5}
 Registration(3)/Recall(3): {0,1,2,3}/{0,1,2,3}
 Attention and calculation(5): {0,1,2,3,4,5}
@@ -35,16 +35,16 @@ Naming(2)/Repeat(1)/Reading(1)/Writing(1): {0,1,2}/{0,1}/{0,1}/{0,1}
 
 [Hemineglect]
 Preferential gaze: {+,-}
-Star cancellation: {}/54
+Star cancellation: ___/54
 Bisection test: {normal, impaired}
 Clock drawing: {normal, abnormal}
 Tactile extinction: {+,-}
 
 [Speech & Language]
 Main language: {Mandarin, Taiwanese, Hakka, English}
--LAST-A score: {}/15
- Expression index: {}/8 Naming {0,1,2,3,4,5}, Repetition {0,1,2}, Auto speech {0,1}
- Receptive index: {}/7 Picture {0,1,2,3,4}, Verbal {0,1,2,3}
+-LAST-A score: ___/15
+ Expression index: ___/8 Naming {0,1,2,3,4,5}, Repetition {0,1,2}, Auto speech {0,1}
+ Receptive index: ___/7 Picture {0,1,2,3,4}, Verbal {0,1,2,3}
 -Auditory comprehension: {good, impaired}
  Object/Body part: {correct, incorrect}
 -Expression: {fluent, non-fluent}, {spontaneous, cued}
@@ -58,7 +58,7 @@ Main language: {Mandarin, Taiwanese, Hakka, English}
  Name: {poor, fair}, Copy digits: {poor, fair}, Copy characters: {poor, fair}, Dictation: {poor, fair}, Spontaneous: {poor, fair}
 -Dysgraphia: {+,-}, Alexia: {+,-}
 
-Aphasia type impression: {Broca, Transcortical Motor, Global, Wernicke, Conduction, Anomic, Mixed}
+Aphasia type impression: {Global, Broca, Transcortical Motor, Wernicke, Transcortical Sensory, Transcortical Mixed, Conduction, Anomic}
 
 [Apraxia]
 Orofacial: {intact, impaired}
@@ -110,7 +110,7 @@ CN VII: facial palsy {+,-}
 CN VIII: hearing {symmetrical, asymmetrical}, VOR {intact, impaired}
 CN IX/X: palate elevation {symmetrical, asymmetrical}, uvula {midline, deviated}, gag reflex {preserved, absent}
 CN XI: SCM {intact, impaired}, trapezius {intact, impaired}
-CN XII: tongue protrusion {midline, deviated}
+CN XII: tongue protrusion {midline, deviated} {to the left, to the right}
 
 [Motor Status]
 Brunnstrom: 
@@ -159,9 +159,9 @@ Function:
   Rolling: {minimal, moderate, maximal} {assistance, contact guard, supervision}
   Sitting up: {minimal, moderate, maximal} {assistance, contact guard, supervision}
   Standing up: {minimal, moderate, maximal} {assistance, contact guard, supervision}
-  Transfer: {assistance, supervision}
-  Ambulation: {with, without device} {handrail, cane, walker} under {minimal, moderate, maximal} {assistance, supervision}
-  Slope/Stairs: {assistance, supervision}
+  Transfer: {minimal, moderate, maximal} {assistance, contact guard, supervision}
+  Ambulation: {with, without device} {handrail, cane, walker} under {minimal, moderate, maximal} {assistance, contact guard, supervision}
+  Slope/Stairs: {with, without device} {handrail, cane} under {minimal, moderate, maximal} {assistance, contact guard, supervision}
 
 Functional Ambulation Classification (FAC): {0,1,2,3,4,5}
 [0級：不能行走。
@@ -170,7 +170,7 @@ Functional Ambulation Classification (FAC): {0,1,2,3,4,5}
 3級：可以在平坦地面獨立行走，但需要隨時有人在旁監督以確認安全或給予口頭指令  
 4級：可以在平坦地面獨立行走，但行走樓梯、坡度或不平路面需要有人在旁監督。
 5級：可以在各種狀況下獨立行走]
-Timed Up & Go (TUG): {} sec / NA
+Timed Up & Go (TUG): ___ {sec, NA}
 
 [Barthel Index] /100
 Feeding: {0,5,10}/10, Transfer: {0,5,10,15}/15, Grooming: {0,5}/5, Toilet: {0,5,10}/10, Bathing: {0,5}/5, Walking: {0,5,10,15}/15, Stairs: {0,5,10}/10, Dressing: {0,5,10}/10, Bowel: {0,5,10}/10, Bladder: {0,5,10}/10
@@ -182,5 +182,3 @@ Feeding: {0,5,10}/10, Transfer: {0,5,10,15}/15, Grooming: {0,5}/5, Toilet: {0,5,
 3-中度失能：需要一些幫忙，但可以不需協助獨力行走
 4-中重度失能：需依賴協助始能獨立行走及照顧自身所需
 5-重度失能：臥床、尿失禁，需要持續的護理照顧和注意
-
-
