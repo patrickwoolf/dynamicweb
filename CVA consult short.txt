@@ -65,8 +65,7 @@ Plan:
   - {Speech therapy:} {吞嚥治療評估 and 吞嚥治療, Not indicated due to current poor arousal and order following; NG is suggested to be kept based on current status. Please contact us if the patient can maintain 30 minutes of arousal in the daytime.} {語言治療評估; Verbal production; Augmentative communication; Oral Treatment; Oral motor training}
   - {Psychotherapy:} {心理治療評估 and 心理治療}
   - {復健紅綠燈}{*In-bed PT is not indicated currently due to 紅燈:} {agitation/combative, intracranial hypertension, spinal precautions (pre-clearance/fixation), uncontrolled seizures}
-___
-Goals:
+2. Goals:
 - {Early mobilization}
 - {Prevent complications}
 - {Caregiver training}
@@ -76,3 +75,6 @@ Goals:
 - {Increased oromotor efficiency and safety, Increased oral feeding efficiency and remove NG tube as possible after adequate oral intake, Partial oral feeding and keep NG tube}
 - {Achieve functional communication}
 - {Improved dysarthria}
+___
+3. 欲追蹤復健進度與過程，請參考 IMMIS > 病人主畫面 > 復健治療 > 各職類治療紀錄
+4. Feel free to contact R3吳一宏 (GSM: 61947) for any further discussions. Thank you very much for your consultation.
