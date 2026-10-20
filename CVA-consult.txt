@@ -1,27 +1,50 @@
-[Physical Examination]
-Vital signs: {Stable, Unstable}
-O2 demand: SPO2: >92% with {RA,NC,NRM,BiPAP}
-Consciousness: E{1,2,3,4}V{1,2,3,4,5}M{1,2,3,4,5,6}, {alert, drowsy, stuporous, coma}
-Cognition: {intact, poor cognition, fluctuating, not assessable}, due to {drowsy state, medication effect, ___}
-Tubes: {Foley catheter, nasogastric tube, central line, none, ___}
+{[Present illness]}
+{loss of consciousness, impaired cognition, myoclonus, hypertone, muscle twitching, bladder incontinence, bowel incontinence, slurred speech, difficulty swallowing, loss of verbal output, cannot follow verbal commands} ___
+{[Family History:]} ___
+[Premorbid] {not acquired due to impaired consciousness/cognition}
+Living environment: ___樓 E{+,-} with ___
+Occupation: ___
+Education: ___
+Caregiver: {院看, 巴氏, 先生, 太太, 兒子, 女兒} ___
+Ambulation: {community without device, community, indoor} {with cane, with walker, with wheelchair}
+ADLs: {independent, dependent with heavy hygiene, totally dependent}
 
-[Cranial Nerves]
-CN II: visual acuity {intact, impaired}, visual field {intact, impaired}
-CN III/IV/VI: pupils 3/3 mm, light reflex R/L: {+/+}, ptosis: {+,-}, EOM: {full, restricted}
-CN V: facial sensation {intact, impaired}
+[Physical Examination]
+Vital signs: {normotensive, hypertensive, hypotensive} {and bradycardia, and normal heart beat, and tachycardia}
+O2 demand: SPO2: >92% with {RA,NC,NRM,BiPAP,ETT,HFNC,Tracheostomy}
+
+Consciousness: E{1,2,3,4}V{1,2,3,4,5,T,A}M{1,2,3,4,5,6}, {alert, drowsy, stuporous, coma}
+Cognition: {intact, poor cognition, fluctuating, not assessable due to} {drowsy state, medication effect} ___
+Tubes: {none, Foley catheter+, nasogastric tube+, central line+, endotracheal tube+, tracheostomy+} ___
+
+{Rancho Los Amigos (if TBI):}
+{ Level I: No Response}
+{ Level II: Generalized Response}
+{ Level III: Localized Response}
+{ Level IV: Confused-agitated}
+{ Level V: Confused-inappropriate; non-Agitated; maximal assistance (f/u Simple order + 自我照顧 under assistance)}
+{ Level VI: Confused-appropriate; moderate assistance (Social interaction 但 impaired judgement)}
+{ Level VII: Automatic-appropriate; minimal assistance in ADL (goal-directed)}
+{ Level VIII: Purposeful-appropriate; standby assistance}
+
+[Cranial Nerves] {unable to follow order}
+CN II: visual acuity {intact, impaired, NA}, visual field {intact, impaired} {by threatening test}
+CN III/IV/VI: pupils {3,4,5,6}/{3,4,5,6} mm, light reflex R/L: {+,-}/{+,-}, ptosis: {+,-}, EOM: {full, restricted}, preferential gaze: {+ to the right, + to the left, -}
+CN V: facial sensation {intact, impaired, NA}
 CN VII: facial palsy {+,-}
 CN VIII: VOR {intact, impaired}
-CN IX/X: uvula {midline, deviated}, gag reflex {preserved, absent}
-CN XI: trapezius {intact, impaired}
-CN XII: tongue protrusion {midline, deviated}
+CN IX/X: uvula {midline, deviated, NA}, gag reflex {preserved, absent}
+CN XI: trapezius {intact, impaired, NA}
+CN XII: tongue protrusion {midline, deviated, NA}
 
 [Speech & Swallowing]
+Dysarthria: {+,-}
 Speech:
-- Fluency: {non}fluent
-- Comprehension: {failed, pass} yes/no questions 
+- Fluency: {no verbal output, nonfluent, fluent} {sentence levels, phrase levels, word levels}
+- Comprehension: {failed, pass} yes/no questions, {pass, failed} {1,2,3}-step orders
 - Repetition: {failed, pass} 白紙真正寫黑字
 - Naming: {failed, pass} pen 
-Swallowing: 
+Swallowing: {unable to assess due to impaired order comprehension and there was no swallowing reflex during observation, saliva swallowing with prompt swallowing reflex and fair laryngeal elevation, delayed swallowing reflex and decreased laryngeal elevation, 3 cc clear water test, 100 mL water test:} {> 30 s, < 30 s}
 - Oral stasis: {+, -}, Drooling: {+, -}, Premature spillage: {+, -}
 - Time to larynx elevation: {<1s, 1–3s, >3s}
 - Larynx elevation: {full, decreased, minimal}
@@ -30,31 +53,77 @@ Swallowing:
 - Multiple swallows: {+, -}
 
 [Motor Status]
-Muscle Strength (MMT):
-RUE: {0,1,2,3,4,5}
-LUE: {0,1,2,3,4,5}
-RLE: {0,1,2,3,4,5}
-LLE: {0,1,2,3,4,5}
+{Brunnstrom: }
+ {RUE(P/D):} {I,II,III,IV,V}/{I,II,III,IV,V}, {RLE:} {I,II,III,IV,V}
+ {LUE(P/D):} {I,II,III,IV,V}/{I,II,III,IV,V}, {LLE:} {I,II,III,IV,V}
+MMT: 
+ RUE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}, RLE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}
+ LUE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}, LLE(P/D): {1,2,3-,3,3+,4,5}/{1,2,3-,3,3+,4,5}
+{C5678T1 ////}
+{L2345S1 ////}
+Hoffman signs: R/L= {+,-}/{+,-}
+Babinski sign: R/L= {+,-}/{+,-}
 
-Brunnstrom Stage:
-{R,L}UE (P/D): {I,II,III,IV,V} / {I,II,III,IV,V}
-LE: {I,II,III,IV,V}
+Sensation: (R/L) {difficult to assess, could not clearly express the impairment level}
+{Light touch:} {intact, impaired on} {RUE} {LUE} {RLE} {LLE}
+{Intact: C2-}___{/C2-}___
+{Impaired:} ___{/}___
+{Absent:} ___{/}___
 
-Deep Tendon Reflexes (DTR):
-Right / Left: {+,++,+++,++++} / {+,++,+++,++++}
+Deep Tendon Reflexes (DTR): Right / Left
+ Biceps: {+,++,+++,++++} / {+,++,+++,++++}
+ Knee: {+,++,+++,++++} / {+,++,+++,++++}
 
-Spasticity (MAS):
-Elbow: {0,1,1+,2,3}
-Knee: {0,1,1+,2,3}
+Spasticity(MAS): {nil}
+ {R,L} {Elbow:} {0, 1, 1+, 2, 3}
+ {R,L} {Knee:} {0, 1, 1+, 2, 3}
 
-[Sensation]
-Light touch: {intact, impaired, unable to assess}
+{Anal sensation:} {present, impaired, absent}
+{Anal tone:} {tight, loose}
+{Anus voluntary contraction:} {present, impaired}
+{Bulbocavernosus reflex:} {present, impaired}
 
 [Sphincter Function]
-Defecation: {continent, incontinent, diaper use, other: ___}
-Urination: {continent, incontinent, Foley catheter, diaper use, other: ___}
+Defecation: {continent, incontinent} {with commode, diaper use} ___
+Urination: {continent, incontinent} {with Foley catheter, diaper use} ___
 
 [Functional Status]
-Current status: {bedrest (ICU setting), wheelchair, ambulatory with aid, independent ambulation}
+Current status: {bedrest, wheelchair, ambulatory with, independent ambulation} {aid, supervision, contact guard, minimal assistance, moderate assistance, maximal assistance} {with wheelwalker, walker, unicane, quadricane, handrail}
 BADLs: {independent, partially dependent, totally dependent}
 Modified Rankin Scale (mRS): {0,1,2,3,4,5}
+
+=========================
+Plan:
+{[Ward rehabilitation]}
+{1. We will arrange rehabilitation programs including}
+{Physical therapy: 物理治療評估; Facilitation techniques; Passive ROM; Ambulation training; Therapeutic Exercise; Strengthening training; Endurance training} 
+{Occupational therapy: 職能治療評估; ADL training; U/E or L/E function training; Transfer training; Balance training;} {Anterior type AFO, Posterior type AFO} 
+{Speech therapy:} {吞嚥治療評估 and 吞嚥治療} {語言治療評估; Verbal production; Augmentative communication; Oral Treatment; Oral motor training}  
+{Please contact us for further ST arrangement if the patient is able to follow orders more consistently at daytime > 8 hrs a day with stable medical conditions.}
+{2. Suggest further rehabilitation via OPD.}
+{2. The patient is indicated for further in-patient rehabilitation. Please contact us if the patient agrees and is ready for bed transfer.}
+{[ICU rehabilitation]}
+{1.We will arrange rehabilitation programs including:}
+{Physical therapy: 物理治療評估; Facilitation; Passive ROM; Therapeutic Exercise; Strengthening training}
+{Occupational therapy: posterior type AFO}
+{國泰}
+{Occupational therapy: 職能治療評估; ADL training; U/E or L/E function training; Transfer training; Balance training;, Posterior type AFO}
+{Speech therapy:} {吞嚥治療評估 and 吞嚥治療} {語言治療評估; Verbal production; Augmentative communication; Oral Treatment; Oral motor training}  
+{*ST is not indicated currently due to consciousness disturbance/prominent cognitive impairment/unstable vital signs/infection episode. Please contact us for further ST arrangement if the patient is able to follow orders more consistently at daytime > 8 hrs a day with stable medical conditions.}
+{復健紅綠燈}{*In-bed PT is not indicated currently due to 紅燈:} {agitation/combative, intracranial hypertension, spinal precautions (pre-clearance/fixation), uncontrolled seizures}
+{國泰PT/OT/ST都可以開，但要標明}{*OT/ST is not feasible currently due to} {consciousness disturbance., prominent cognitive impairment., unstable vital signs., infection episode.} {We would initiate corresponding therapies when the patient's condition is suitable.}
+___
+Goals:
+{Early mobilization}
+{Prevent complications}
+{Caregiver training}
+{Transfer with} {contact guard, supervision, minimal assistance, moderate assistance, maximal assistance}
+{Ambulation with} {walker, wheelwalker, unicane, quadricane} {under contact guard, under supervision, under minimal assistance, under moderate assistance, under maximal assistance}
+{BADLs with} {assistance, independence and partial assistance with} {toileting} {bathing}
+{Increased oral feeding efficiency and remove NG tube as possible after adequate oral intake}
+{Achieve functional communication}
+{Improved dysarthria}
+
+
+
+
