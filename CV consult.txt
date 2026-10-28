@@ -19,11 +19,11 @@
 `Cough ability: {functional, impaired} 
 `Wound: fair 
 `Tube: {nil, NG+, Foley+, sheath+, temporary pacemaker+, chest tube+, CVC+, Permcath+, Double lumen+, A-line+}  ___
-`Heart: {systolic, diastolic, no} murmurs {at} {aortic area, pulmonic area, left sternal border, tricuspid area, mitral area}
+`Heart: {systolic, diastolic, no} murmurs {at} {aortic area, pulmonic area, left sternal border, tricuspid area, mitral area}; rales:{+/-}
 `Muscle power: {no focal weakness ; muscle power full over four limbs , mild weakness of four limbs (MP bilateral upper 4/ bilateral lower 4), <3 over} {RUE} {RLE} {LUE} {LLE}
 `Sensation: grossly intact
-`Functional status: {bedrest , walk short distance under partial assistance , independently}
 `Cardiopulmonary capacity: {no} {angina;, marked dyspnea;, electrocardiogram (ECG) changes suggestive of ischemia;, severe hypertension (>=180/110 mmHg)} {at rest, while sitting, while standing, when walking}
+`Functional status: {bedrest , walk short distance under partial assistance , independently}___
 `BADLs: {totally dependent, partially dependent , supervision for safety concerns , independent}
 ___
 =======================
