@@ -1,0 +1,55 @@
+# PHYSICAL & NEUROLOGICAL EXAMINATION
+
+1. General & Autonomic Status
+- Consciousness/Alertness: {Hyperalert, Alert, Lethargic, Obtunded, Stuporous, Comatose} (Corresponds to Sarnat Stage: {None, Stage 1 (Mild), Stage 2 (Moderate), Stage 3 (Severe)})
+- Autonomic Stability during handling: {Stable, Unstable with desaturations, Unstable with bradycardia, Irritable}
+- Cry: {Normal/Lusty, High-pitched/Irritable, Weak, Absent}
+
+2. Cranial Nerves & Bulbar Function
+- CN II, III, IV, VI (Pupils/Ocular): Pupils are {equal and reactive, sluggish, unreactive}. Extraocular movements are {intact, conjugate, dysconjugate, showing nystagmus, showing sustained deviation, showing setting-sun sign}.
+- CN VII (Facial Symmetry): {Symmetric at rest and cry, Asymmetric during cry (left-side weakness), Asymmetric during cry (right-side weakness)}
+- CN IX, X, XII (Suck & Swallow):
+  - Suck reflex: {Strong/Coordinated, Weak, Absent}
+  - Swallow reflex: {Present/Coordinated, Delayed, Absent}
+  - Secretions management: {Good, Fair/Pooling, Poor/Requiring frequent suctioning}
+
+3. Motor and Muscle Tone Baseline
+- Resting Posture: {Normal physiologic flexion, Hypotonic "frog-leg" posture, Asymmetric posture, Opisthotonus/Extensor posturing}
+- Passive Muscle Tone:
+  - Axial (Trunk/Neck): {Normal, Hypotonic (marked head lag), Hypertonic}
+  - Appendicular (Upper Extremities): {Normal, Hypotonic (scarf sign crosses midline easily), Spastic/Hypertonic}
+  - Appendicular (Lower Extremities): {Normal, Hypotonic (popliteal angle >150°), Spastic/Hypertonic}
+- Spontaneous Movements: {Normal and variable (General Movements present), Monotonous, Cramped-synchronized, Absent/Sparse}
+- Focal Weakness/Asymmetry: {None, Right upper extremity weakness, Left upper extremity weakness, Right lower extremity weakness, Left Lower extremity weakness}
+
+4. Primitive Reflexes
+- Moro Reflex (3-6 months): {Strong and symmetric, Weak and symmetric, Asymmetric (Right depressed), Asymmetric (Left depressed), Absent}
+- Palmar Grasp (3-4 months): {Strong and symmetric, Weak bilaterally, Asymmetric, Absent}
+- Plantar Grasp (9-12 months): {Strong and symmetric, Weak bilaterally, Asymmetric, Absent}
+- Asymmetric Tonic Neck Reflex (ATNR) (4-6 months): {Slight/Normal, Obligatory/Abnormal, Absent}
+- Rooting Reflex (3-4 months): {Strong, Weak, Absent}
+
+5. Integumentary & Musculoskeletal
+- Congenital Hemangioma: Center shows {telangiectasia, ulceration, active bleeding, no skin breakdown}.
+- Joint Range of Motion (ROM): {Full passive ROM in all joints, Limitations noted in bilateral hips, Limitations noted in ankles, Joint contractures present} ___.
+
+---
+
+# RECOMMENDATIONS & REHABILITATION PLAN
+A. We will arrange 
+{Physical therapy: 物理治療評估; Facilitation techniques; Passive ROM; Therapeutic Exercise; Strengthening training; Endurance training} 
+{Occupational therapy: 職能治療評估; ADL training; U/E or L/E function training; Transfer training; Balance training;} {Anterior type AFO, Posterior type AFO} 
+{Speech therapy:} {吞嚥治療評估 and 吞嚥治療} {語言治療評估; Verbal production; Augmentative communication; Oral Treatment; Oral motor training}  
+{Psychotherapy:} {心理治療評估 and 心理治療}
+B. Rehabilitaiton cautions include
+1. Environmental & Sensory Modifications
+- Provide {low-stimulation environment (dim lights, clustered care), gentle tactile stimulation, sensory deprivation protocols}.
+2. Therapeutic Positioning
+- Implement developmental positioning using {nested positioning, midline orientation of limbs, shoulder protraction with hip/knee flexion}.
+- Skin/Vascular Precaution: {Avoid direct prolonged pressure on the right buttock hemangioma, Avoid shearing forces during diaper changes, Use donut-shaped padding around the lesion}.
+3. Feeding & Oral-Motor Therapy
+- Feeding Status: Patient is currently {NPO, Nasogastric tube fed, Orogastric tube fed, Orally bottle/breastfed}.
+- Intervention: {Initiate non-nutritive sucking (NNS) to pacifier during tube feeds, Initiate formal oral-motor therapy for suck-swallow coordination, Defer oral stimulation until metabolic and seizure stability is achieved}.
+4. Surveillance & Follow-up
+- Re-evaluate in {24 hours, 48 hours, 1 week} to monitor evolution of muscle tone and primitive reflexes as metabolic parameters normalize.
+- Recommend long-term referral to {High-Risk Infant Follow-up Clinic, Early Intervention Program, Pediatric Neurology} upon hospital discharge for early cerebral palsy (CP) surveillance.
