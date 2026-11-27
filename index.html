@@ -17,7 +17,24 @@
     .delete-button { position: absolute; top: 5px; right: 5px; width: 15px; background: transparent; border: none; color: black; cursor: pointer; }
     #resultContainer { margin-top: 20px; text-align: left; font-family: Consolas, monospace; font-size: 12px; }
     p { background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
-    .inline-textarea { display: inline-block; font-family: inherit; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; padding: 4px; width: 90px; height: 24px; resize: none; vertical-align: middle; overflow: hidden; }
+    /* 讓內嵌輸入框隨文字橫向延伸，按 Enter 才換行 */
+    .inline-textarea {
+      display: inline-block;
+      font-family: inherit;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 4px 8px;
+      min-width: 90px;
+      width: 90px;
+      height: 26px;
+      line-height: 18px;
+      resize: none;
+      vertical-align: middle;
+      overflow: hidden;
+      white-space: pre; /* 保持空白與換行，不隨意自動折行 */
+      box-sizing: border-box;
+    }
     #floatingBox {
       position: fixed;
       top: 10px;
@@ -40,7 +57,6 @@
       height: auto;
       margin-left: 8px;
     }
-    /* Template Select Styling */
     .template-selector {
       margin-left: 15px;
       padding: 5px;
@@ -73,7 +89,7 @@
   <form id="dynamicForm">
     <div id="dynamicContent"></div>
     <button type="button" onclick="addFormGroup()">Add Form</button>
-    <button type="button" onclick="generateResult()">Generate Result</button>
+    <button type="button" onclick="generateResult(true)">Generate Result</button>
   </form>
 
   <div id="fontControls">
@@ -86,23 +102,42 @@
 
   <script>
     const GITHUB_API_URL = "https://api.github.com/repos/patrickwoolf/dynamicweb/contents/";
+    const RESULT_STATE_KEY = "dynamicweb_result_state_v1";
+    const HAS_RESULT_KEY = "dynamicweb_has_result_v1";
+    let formCounter = 0;
+
+    function initApp() {
+      const dc = document.getElementById('dynamicContent');
+      if (dc.children.length === 0) {
+        addFormGroup();
+      }
+      loadSavedValues();
+
+      if (localStorage.getItem(HAS_RESULT_KEY) === "1") {
+        generateResult(false);
+        restoreResultState();
+      }
+    }
 
     document.addEventListener("DOMContentLoaded", () => {
-      addFormGroup();
-      loadSavedValues();
-      fetchRepoFiles(); // Fetch files for the dropdown
+      initApp();
+      fetchRepoFiles();
     });
 
-    // 1. Fetch file list from GitHub
+    // 重整或從上一頁 (bfcache) 回到此頁時都確保還原點選與輸入內容
+    window.addEventListener("pageshow", () => {
+      initApp();
+    });
+
     async function fetchRepoFiles() {
       const select = document.getElementById('repoTemplateSelect');
+      if (select.options.length > 1) return; // 避免 pageshow 重複 append
       try {
         const response = await fetch(GITHUB_API_URL);
         if (!response.ok) throw new Error("Failed to fetch repo content");
         const files = await response.json();
 
         files.forEach(file => {
-          // Only show .txt or .md files (exclude icons/folders)
           if (file.type === "file" && file.name.endsWith('.txt')) {
             const opt = document.createElement('option');
             opt.value = file.download_url;
@@ -111,7 +146,6 @@
           }
         });
 
-        // Add event listener for selection
         select.addEventListener('change', (e) => {
           if (e.target.value) {
             loadTemplateFromUrl(e.target.value);
@@ -122,7 +156,6 @@
       }
     }
 
-    // 2. Load the specific file content into the first textarea
     async function loadTemplateFromUrl(url) {
       try {
         const res = await fetch(url);
@@ -141,8 +174,6 @@
       }
     }
 
-    // --- REMAINDER OF YOUR ORIGINAL LOGIC ---
-
     function addFormGroup() {
       const dc = document.getElementById('dynamicContent');
       const fg = document.createElement('div');
@@ -151,7 +182,7 @@
       label.textContent = 'Enter your content:';
       const ta = document.createElement('textarea');
       ta.placeholder = 'Type here...';
-      ta.id = 'textarea' + dc.childElementCount;
+      ta.id = 'textarea' + (formCounter++);
       ta.addEventListener('input', function () {
         autoResize(this);
         saveValueToLocalStorage(this);
@@ -168,9 +199,56 @@
       dc.appendChild(fg);
     }
 
+    // 建立隱藏的量測元素，用來精準計算文字寬度與按 Enter 後的高度
+    const measureEl = document.createElement('div');
+    measureEl.style.position = 'fixed';
+    measureEl.style.top = '-9999px';
+    measureEl.style.left = '-9999px';
+    measureEl.style.visibility = 'hidden';
+    measureEl.style.pointerEvents = 'none';
+    measureEl.style.whiteSpace = 'pre';
+    document.body.appendChild(measureEl);
+
     function autoResize(ta) {
-      ta.style.height = 'auto';
-      ta.style.height = ta.scrollHeight + 'px';
+      const cs = window.getComputedStyle(ta);
+      measureEl.style.fontFamily = cs.fontFamily;
+      measureEl.style.fontSize = cs.fontSize;
+      measureEl.style.fontWeight = cs.fontWeight;
+      measureEl.style.letterSpacing = cs.letterSpacing;
+      measureEl.style.lineHeight = cs.lineHeight;
+      measureEl.style.padding = cs.padding;
+      measureEl.style.border = cs.border;
+      measureEl.style.boxSizing = cs.boxSizing;
+
+      const isInline = ta.classList.contains('inline-textarea');
+      const rawValue = ta.value || ta.placeholder || '';
+      const lines = rawValue.split('\n');
+
+      // 找出最長那一行的寬度（按下 Enter 換行後，每一行各自算寬度）
+      let maxLineWidth = 0;
+      lines.forEach(line => {
+        measureEl.textContent = line.length > 0 ? line : ' ';
+        const w = measureEl.getBoundingClientRect().width;
+        if (w > maxLineWidth) maxLineWidth = w;
+      });
+
+      if (isInline) {
+        // 內嵌框：隨最長一行橫向延長，最少 90px，最多不超過視窗寬度的 85%
+        const maxAllowedWidth = Math.max(160, window.innerWidth * 0.85);
+        const targetWidth = Math.min(Math.max(90, Math.ceil(maxLineWidth + 12)), maxAllowedWidth);
+        ta.style.width = targetWidth + 'px';
+
+        // 高度依換行數（Enter 次數 + 1）決定
+        const lineHeightPx = parseFloat(cs.lineHeight) || 18;
+        const verticalPad = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+        const verticalBorder = parseFloat(cs.borderTopWidth) + parseFloat(cs.borderBottomWidth);
+        const targetHeight = Math.max(26, Math.ceil(lines.length * lineHeightPx + verticalPad + verticalBorder));
+        ta.style.height = targetHeight + 'px';
+      } else {
+        // 主表單 textarea：維持寬度，隨 Enter 換行數調整高度
+        ta.style.height = 'auto';
+        ta.style.height = ta.scrollHeight + 'px';
+      }
     }
 
     function saveValueToLocalStorage(ta) {
@@ -189,10 +267,74 @@
       });
     }
 
-    function generateResult() {
+    function saveResultState() {
+      const out = document.getElementById('resultContainer');
+      const ps = Array.from(out.getElementsByTagName('p'));
+      const selected = [];
+      const inlineInputs = {};
+
+      ps.forEach((p, groupIdx) => {
+        const boxes = Array.from(p.querySelectorAll('.selectable-box'));
+        boxes.forEach((box, boxIdx) => {
+          if (box.classList.contains('selected')) {
+            selected.push(`${groupIdx}-${boxIdx}`);
+          }
+        });
+
+        const inputs = Array.from(p.querySelectorAll('.inline-textarea'));
+        inputs.forEach((ta, taIdx) => {
+          inlineInputs[`${groupIdx}-${taIdx}`] = ta.value;
+        });
+      });
+
+      localStorage.setItem(RESULT_STATE_KEY, JSON.stringify({ selected, inlineInputs }));
+    }
+
+    function restoreResultState() {
+      const raw = localStorage.getItem(RESULT_STATE_KEY);
+      if (!raw) return;
+
+      try {
+        const state = JSON.parse(raw);
+        const selectedSet = new Set(state.selected || []);
+        const inlineInputs = state.inlineInputs || {};
+
+        const out = document.getElementById('resultContainer');
+        const ps = Array.from(out.getElementsByTagName('p'));
+
+        ps.forEach((p, groupIdx) => {
+          const boxes = Array.from(p.querySelectorAll('.selectable-box'));
+          boxes.forEach((box, boxIdx) => {
+            if (selectedSet.has(`${groupIdx}-${boxIdx}`)) {
+              box.classList.add('selected');
+            } else {
+              box.classList.remove('selected');
+            }
+          });
+
+          const inputs = Array.from(p.querySelectorAll('.inline-textarea'));
+          inputs.forEach((ta, taIdx) => {
+            const key = `${groupIdx}-${taIdx}`;
+            if (Object.prototype.hasOwnProperty.call(inlineInputs, key)) {
+              ta.value = inlineInputs[key];
+              autoResize(ta);
+            }
+          });
+        });
+      } catch (err) {
+        console.error("Error restoring result state:", err);
+      }
+    }
+
+    function generateResult(resetState = true) {
       const out = document.getElementById('resultContainer');
       out.innerHTML = '';
       const groups = document.getElementById('dynamicContent').getElementsByClassName('form-group');
+
+      if (resetState) {
+        localStorage.removeItem(RESULT_STATE_KEY);
+      }
+      localStorage.setItem(HAS_RESULT_KEY, "1");
 
       Array.from(groups).forEach(fg => {
         const ta = fg.querySelector('textarea');
@@ -207,7 +349,10 @@
               const div = document.createElement('div');
               div.className = 'selectable-box';
               div.textContent = opt;
-              div.onclick = () => div.classList.toggle('selected');
+              div.onclick = () => {
+                div.classList.toggle('selected');
+                saveResultState();
+              };
               frag.appendChild(div);
             });
             last = regex.lastIndex;
@@ -227,12 +372,15 @@
           const ta = document.createElement('textarea');
           ta.placeholder = '...';
           ta.className = 'inline-textarea';
-          ta.addEventListener('input', () => autoResize(ta));
+          ta.addEventListener('input', () => {
+            autoResize(ta);
+            saveResultState();
+          });
           frag.appendChild(ta);
         }
       });
     }
-
+    
     function copyResult() {
       const ps = document.getElementById('resultContainer').getElementsByTagName('p');
       let text = '';
@@ -247,11 +395,38 @@
         }
         text += '\n';
       });
-      if (text.trim()) {
-        navigator.clipboard.writeText(text).then(() => alert('Copied!'));
+
+      const finalText = text.trim();
+      if (!finalText) return;
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(finalText)
+          .then(() => alert('Copied!'))
+          .catch(() => fallbackCopyText(finalText));
+      } else {
+        fallbackCopyText(finalText);
       }
     }
 
+    function fallbackCopyText(text) {
+      const helper = document.createElement('textarea');
+      helper.value = text;
+      helper.setAttribute('readonly', '');
+      helper.style.position = 'fixed';
+      helper.style.top = '-9999px';
+      helper.style.left = '-9999px';
+      document.body.appendChild(helper);
+      helper.select();
+
+      try {
+        const ok = document.execCommand('copy');
+        alert(ok ? 'Copied!' : 'Copy failed. Please copy manually.');
+      } catch (err) {
+        alert('Copy failed. Please copy manually.');
+      } finally {
+        document.body.removeChild(helper);
+      }
+    }
     const outEl = document.getElementById('resultContainer');
     let fs = 14;
     document.getElementById('increaseFontBtn').onclick = () => { fs++; outEl.style.fontSize = fs + 'px'; };
